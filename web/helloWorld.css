@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: url("helloWorld.jpg");
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -1.25em;
+
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 5em;
+    text-align: center;
+}
