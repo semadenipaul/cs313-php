@@ -8,9 +8,11 @@ div.container {
 
 div.contain {
     display: grid;
+    grid-gap: 5px;
+    padding: 0px;
     max-width: 50%;
 }
 
 div {
-    border: 1em solid black;
+    border: 1px solid black;
 }
