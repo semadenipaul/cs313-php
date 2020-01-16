@@ -23,8 +23,8 @@
             }
         }
         ?> 
-        <?php multiDiv()?>
-        <?php multiDiv()?>
+        <?php multiDiv();?>
+        <?php multiDiv();?>
     </div>
     
 </body>

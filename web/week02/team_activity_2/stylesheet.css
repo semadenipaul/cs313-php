@@ -1,6 +1,16 @@
 
-div {
+div.container {
+    display: flex;
     font-family: 'Special Elite', cursive;
+
     
-    
+}
+
+div.contain {
+    display: grid;
+    max-width: 50%;
+}
+
+div {
+    border: 1em solid black;
 }
