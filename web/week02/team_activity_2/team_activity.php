@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheets.css">
     <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
     <title>Team Activity</title>
 </head>
@@ -18,15 +18,19 @@
         <?php
             for($i = 0; $i < 10; $i++){
                 if ($i % 2 == 0) {
-                    echo "<div class='contain'; style='color:red; font-family: 'Special Elite', cursive;'> This is div #" . $i . "</div>";
+                    echo "<div style='color:red; font-family: 'Special Elite', cursive;'> This is div #" . $i . "</div>";
                 } else {
-                    echo "<div class='contain'; style='font-family: 'Special Elite', cursive;'> This is div #" . $i . "</div>";
+                    echo "<div style='font-family: 'Special Elite', cursive;'> This is div #" . $i . "</div>";
                 }
             }
         }
         ?> 
-        <?php multiDiv();?>
-        <?php multiDiv();?>
+        <div class=contain>
+            <?php multiDiv();?>
+        </div>
+        <div class=contain>
+            <?php multiDiv();?>
+        </div>
     </div>
     
 </body>

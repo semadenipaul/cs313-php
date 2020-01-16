@@ -1,13 +1,9 @@
-
 div.container {
     display: flex;
-    font-family: 'Special Elite', cursive;
-
-    
+    font-family: 'Special Elite', cursive; 
 }
 
 div.contain {
-    display: grid;
     grid-gap: 5px;
     padding: 0px;
     max-width: 50%;
