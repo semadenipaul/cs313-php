@@ -1,12 +1,14 @@
 div.container {
     display: flex;
     font-family: 'Special Elite', cursive; 
+    margin:auto;
 }
 
 div.contain {
     grid-gap: 5px;
     padding: 0px;
     max-width: 50%;
+    margin: 80% 0;
 }
 
 div {
