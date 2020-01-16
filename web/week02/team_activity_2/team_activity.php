@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    //Main header
+    <!-- Main header -->
     <h1 style="text-align:center; font-family: 'Special Elite', cursive;">PHP Team Activity</h1>
     <div class="container">
-        //Creating the main content of the exercise
+        <!--Creating the main content of the exercise-->
         <?php function multiDiv(){?>
             <h2>PHP Team Activity</h2>
         <?php
