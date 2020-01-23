@@ -17,7 +17,15 @@ session_start();
    ?>
    <a href="thursdaySession2.php">Check the variables on another page</a>
 
-   <?php // set session variables using a form 
+   <h3>Just for kicks, let's try this with a form.</h3>
+   <form action="" method="POST">
+      <input type="text" name="picture">
+      <input type="submit" name="Submit" value="Submit!">
+   </form>
+   <?php
+   if (isset($_POST['Submit'])) {
+      $_SESSION['picURL'] = $_POST['picture'];
+   }
    ?>
 </body>
 
