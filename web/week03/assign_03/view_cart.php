@@ -35,8 +35,8 @@
             <?php
             $choice = $_GET['choice'];
             foreach ($choice as $item) {
-                echo "<li>" . "$". $item . ".00";
-                echo "Total Amount: " . $input;
+                echo "<li>" . $item;
+                echo "Total Amount: " . $total;
             }
             ?>
         </div>
