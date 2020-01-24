@@ -35,7 +35,7 @@
             <?php
             $choice = $_GET['choice'];
             foreach ($choice as $item) {
-                echo "<li>" . $item;
+                echo "<li>" . "$". $item;
             }
             ?>
         </div>
