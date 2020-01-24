@@ -1,0 +1,92 @@
+* {box-sizing: border-box;}
+.item1 {grid-area: header;}
+.item2 {grid-area: items;}
+.item3 {grid-area: buttons;}
+.item4 {grid-area: footer;}
+
+body {
+    background-color: black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header' 'items' 'buttons' 'footer';
+    grid-row-gap: 2em;
+    background-color: white;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.grid-container > h1 {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 50px;
+    color: black;
+    font-family: 'Slabo 27px', serif;
+}
+
+.grid-container > div {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Slabo 27px', serif;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(59, 133, 40);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+    width: 20%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button2 {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(235, 202, 79);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+    width: 20%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span, .button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after, .button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span, .button2:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover  span:after, .button2:hover span:after {
+    opacity: 1;
+    right: 0;
+}

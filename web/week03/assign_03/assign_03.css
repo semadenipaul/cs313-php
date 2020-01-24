@@ -1,0 +1,203 @@
+* {box-sizing: border-box;}
+
+.item0 {grid-area: header;}
+.image {grid-area: image;}
+.item1 {grid-area: tractor;}
+.item2 {grid-area: combine;}
+.item3 {grid-area: swather;}
+.item4 {grid-area: sprayer;}
+.item5 {grid-area: snowblower;}
+.item6 {grid-area: lawnmower;}
+.total {grid-area: total;}
+.item7 {grid-area: buttons;}
+.item8 {grid-area: footer;}
+
+body {
+    background-color: black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header' 'image image image' 'tractor combine swather' 'sprayer snowblower lawnmower' 'total total total' 'buttons buttons buttons' 'footer footer footer';
+    grid-row-gap: 2em;
+    background-color: white;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.grid-container > h1 {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 50px;
+    color: black;
+    font-family: 'Slabo 27px', serif;
+}
+
+.grid-container > div {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Slabo 27px', serif;
+}
+
+.image {
+    background-image: url("landscape.jpg");
+    min-height: 600px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item1 > img {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    height: auto;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.item1:hover {
+    transform: scale(1.04); 
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.item2 > img {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin-top: 13%;
+}
+
+.item2:hover {
+    transform: scale(1.04); 
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.item3 > img {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    height: auto;
+    margin-top: 8%;
+    margin-left: 10%;
+}
+
+.item3:hover {
+    transform: scale(1.04); 
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.item4 > img {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin-top: 13%;
+}
+
+.item4:hover {
+    transform: scale(1.04); 
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.item5 > img {
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+    height: auto;
+    margin-top: 22%;
+    margin-left: 20%;
+}
+
+.item5:hover {
+    transform: scale(1.04); 
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.item6 > img {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: auto;
+    margin-top: 26%;
+    margin-left: 20%;
+}
+
+.item6:hover {
+    transform: scale(1.04); 
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(59, 133, 40);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+    width: 20%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button2 {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(235, 202, 79);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+    width: 20%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span, .button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after, .button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span, .button2:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover  span:after, .button2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
