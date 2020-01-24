@@ -44,7 +44,7 @@
             <button class="button2" name="reset" type="submit"><span>Cancel Order</span></button>
         </div>
         <div class="item4">
-            <p>| Browse Items | Shopping Cart <br> <br>Created at Brigham Young University Idaho <br> January 23, 2020 &#169;</p>
+            <p><a href="assign_03.html">| Browse Items</a> | Shopping Cart <br> <br>Created at Brigham Young University Idaho <br> January 23, 2020 &#169;</p>
         </div>
     </form>
 
