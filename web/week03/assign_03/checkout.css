@@ -38,9 +38,13 @@ body {
 
 
 .item2 {
+    display: -ms-flexbox; /* IE10 */
     display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
+    -ms-flex-direction: column;
     flex-direction: column;
+    flex: 50%;
     margin: 0 -16px;
 }
 
