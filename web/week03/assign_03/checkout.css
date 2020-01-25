@@ -36,19 +36,11 @@ body {
     font-family: 'Slabo 27px', serif;
 }
 
-.col-50 {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    margin: 0 -16px;
-  }
 
 .item2 {
-    display: -ms-flexbox; /* IE10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
+    flex-direction: column;
     margin: 0 -16px;
 }
 
