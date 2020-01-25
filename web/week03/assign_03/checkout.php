@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <form class="grid-container" action="checkout.php" method="GET">
+    <form class="grid-container" action="confirmation.php" method="GET">
         <div class="item1">
             <h1>Checkout</h1>
         </div>
