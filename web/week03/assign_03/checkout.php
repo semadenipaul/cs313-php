@@ -17,7 +17,8 @@
         <div class="item1">
             <h1>Checkout</h1>
             <?php
-            $total = sanitize_input($_SESSION["total"]);
+            $t = $_SESSION["total"];
+            $total = sanitize_input($t);
 
             function sanitize_input($input)
             {
