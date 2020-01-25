@@ -16,6 +16,10 @@ body {
     background-color: black;
 }
 
+label {
+    cursor: default;
+}
+
 .grid-container {
     display: grid;
     grid-template-areas: 'header header header' 'image image image' 'tractor combine swather' 'sprayer snowblower lawnmower' 'total total total' 'buttons buttons buttons' 'footer footer footer';
