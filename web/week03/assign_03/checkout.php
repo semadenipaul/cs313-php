@@ -16,22 +16,6 @@
     <form class="grid-container" action="checkout.php" method="GET">
         <div class="item1">
             <h1>Checkout</h1>
-            <?php
-            $t = $_SESSION["total"];
-            $total = sanitize_input($t);
-
-            function sanitize_input($input)
-            {
-                if (isset($_GET[$input])) {
-                    $input = $_GET[$input];
-                    $input = trim($input);
-                    $input = stripslashes($input);
-                    $input = htmlspecialchars($input);
-                    return $input;
-                }
-                return '';
-            }
-            ?>
         </div>
 
         <div class="item2">
@@ -47,7 +31,7 @@
             <input type="text" id="zip" name="zip" placeholder="10001"><br>
 
             <?php
-            echo "<br>" . "<b>Your total is: " . $total . "</b>";
+            echo "<br>" . "<b>Your total is: " . $_SESSION["total"] . "</b>";
             ?>
         </div>
         <div class="item3">
