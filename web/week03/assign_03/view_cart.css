@@ -32,12 +32,9 @@ body {
     text-align: center;
     padding: 15px;
     border-radius: 5px;
+    font-size: 50px;
     color: black;
     font-family: 'Slabo 27px', serif;
-}
-
-.item2 {
-    font-size: 30px;
 }
 
 .button {
