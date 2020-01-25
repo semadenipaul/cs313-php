@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,6 +38,8 @@
             foreach ($choice as $item) {
                 echo $item . "<br>";
             }
+
+            echo $total;
             ?>
         </div>
         <div class="item3">
