@@ -38,7 +38,7 @@
             foreach ($choice as $item) {
                 echo "$" . $item . "<br>";
             }
-
+            $_SESSION["items"] = $item;
             echo "<br>" . "<b>Your total is: " . $total . "</b>";
             $_SESSION["total"] = $total;
             ?>

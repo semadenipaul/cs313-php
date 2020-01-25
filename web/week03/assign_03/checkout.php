@@ -31,11 +31,12 @@
             <input type="text" id="zip" name="zip" placeholder="10001"><br>
 
             <?php
+            echo $_SESSION["item"] . "</b>";
             echo "<br>" . "<b>Your total is: " . $_SESSION["total"] . "</b>";
             ?>
         </div>
         <div class="item3">
-            <button class="button" name="validate" type="submit" value="1"><span>Complete Purchase</span></button>
+            <button class="button" name="validate" type="submit"><span>Complete Purchase</span></button>
             <button class="button2" name="reset" type="submit"><span>Return to Cart</span></button>
         </div>
         <div class="item4">

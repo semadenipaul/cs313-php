@@ -38,7 +38,7 @@
         <div class="item2">
             <?php
             echo "Your order has been CONFIRMED! <br>";
-
+            echo $_SESSION["item"] . "</b>";
             echo "<b>Your total is: " . $_SESSION["total"] . "</b>";
             echo "<br>" . "Your order will be shipped to this address:" . "<br>";
             echo $address . "<br>" . $city . ", " . $state . " " . $zip;
