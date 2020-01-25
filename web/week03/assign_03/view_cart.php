@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <form class="grid-container">
+    <form class="grid-container" action="checkout.php" method="GET">
         <div class="item1">
             <h1>Items in Your Shopping Cart</h1>
             <?php
@@ -40,10 +40,11 @@
             }
 
             echo "<br>" . "<b>Your total is: " . $total . "</b>";
+            $_SESSION["total"] = $total;
             ?>
         </div>
         <div class="item3">
-            <button class="button" name="validate" type="submit" value="1"><span>Proceed to Check Out</span></button>
+            <button class="button" name="validate" type="submit" value="1"><span>Proceed to Checkout</span></button>
             <button class="button2" name="reset" type="submit"><span>Cancel Order</span></button>
         </div>
         <div class="item4">
