@@ -16,15 +16,6 @@ body {
     background-color: black;
 }
 
-.label {
-    display: flex;
-    flex-direction: row;
-    width: 65%;
-    height: auto;
-    margin-top: 15%;
-    margin-left: 10%;
-}
-
 .grid-container {
     display: grid;
     grid-template-areas: 'header header header' 'image image image' 'tractor combine swather' 'sprayer snowblower lawnmower' 'total total total' 'buttons buttons buttons' 'footer footer footer';
@@ -62,7 +53,7 @@ body {
     background-size: cover;
 }
 
-.item1 > img {
+.item1 > img , label {
     display: flex;
     flex-direction: row;
     width: 65%;
