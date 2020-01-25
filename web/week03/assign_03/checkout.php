@@ -34,25 +34,22 @@
         </div>
 
         <div class="item2">
-            <?php echo "Please enter your shipping address: <br>"?>
+            <?php echo "Please enter your shipping address: <br>" ?>
             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
             <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"><br>
             <label for="city"><i class="fa fa-institution"></i> City</label>
             <input type="text" id="city" name="city" placeholder="New York"><br>
-
-            <div class="row">
-                <div class="col-50">
-                    <label for="state">State</label>
-                    <input type="text" id="state" name="state" placeholder="NY">
-                </div>
-                <div class="col-50">
-                    <label for="zip">Zip</label>
-                    <input type="text" id="zip" name="zip" placeholder="10001">
-                </div>
-                <?php
-                echo "<br>" . "<b>Your total is: " . $total . "</b>";
-                ?>
+            <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
             </div>
+            <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+            </div>
+            <?php
+            echo "<br>" . "<b>Your total is: " . $total . "</b>";
+            ?>
         </div>
         <div class="item3">
             <button class="button" name="validate" type="submit" value="1"><span>Complete Purchase</span></button>

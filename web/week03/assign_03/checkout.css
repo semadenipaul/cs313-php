@@ -36,18 +36,20 @@ body {
     font-family: 'Slabo 27px', serif;
 }
 
-.row {
+.col-50 {
     display: -ms-flexbox; /* IE10 */
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
     margin: 0 -16px;
-}
+  }
 
 .item2 {
-    -ms-flex: 50%; /* IE10 */
-    flex: 50%;
-    padding: 0 16px;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
 }
 
 .button {
