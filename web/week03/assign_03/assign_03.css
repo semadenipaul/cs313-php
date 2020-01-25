@@ -16,7 +16,14 @@ body {
     background-color: black;
 }
 
-
+.label {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    height: auto;
+    margin-top: 15%;
+    margin-left: 10%;
+}
 
 .grid-container {
     display: grid;
