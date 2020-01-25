@@ -15,15 +15,33 @@
     <form class="grid-container" action="" method="GET">
         <div class="item1">
             <h1>Confirmation</h1>
+            <?php
+            $address = sanitize_input('address');
+            $city = sanitize_input('city');
+            $state = sanitize_input('state');
+            $zip = sanitize_input('zip');
+
+            function sanitize_input($input)
+            {
+                if (isset($_GET[$input])) {
+                    $input = $_GET[$input];
+                    $input = trim($input);
+                    $input = stripslashes($input);
+                    $input = htmlspecialchars($input);
+                    return $input;
+                }
+                return '';
+            }
+            ?>
         </div>
 
         <div class="item2">
-            <?php 
-            echo "Your order has been CONFIRMED! <br>"; 
+            <?php
+            echo "Your order has been CONFIRMED! <br>";
 
             echo "<b>Your total is: " . $_SESSION["total"] . "</b>";
             echo "<br>" . "Your order will be shipped to this address:" . "<br>";
-            echo $_GET["address"] . "<br>" . $_GET["city"] . ", " . $_Get["state"] . " " . $_GET["zip"];
+            echo $address . "<br>" . $city . ", " . $state . " " . $zip;
             ?>
         </div>
         <div class="item3">
