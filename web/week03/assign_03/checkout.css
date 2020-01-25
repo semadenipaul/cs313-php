@@ -48,6 +48,14 @@ body {
     margin: 0 -16px;
 }
 
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
 .button {
     display: inline-block;
     border-radius: 4px;
