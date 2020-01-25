@@ -36,7 +36,7 @@
             <?php
             $choice = $_GET['choice'];
             foreach ($choice as $item) {
-                echo "$" . $item . "<br>";
+                echo "$" . $item . ".00" . "<br>";
             }
 
             echo "<br>" . "<b>Your total is: " . $total . "</b>";
