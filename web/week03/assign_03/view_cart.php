@@ -36,9 +36,9 @@
             <?php
             $choice = $_GET['choice'];
             foreach ($choice as $item) {
+                $_SESSION["items"] = $item;
                 echo "$" . $item . "<br>";
             }
-            $_SESSION["items"] = $item;
             echo "<br>" . "<b>Your total is: " . $total . "</b>";
             $_SESSION["total"] = $total;
             ?>
