@@ -36,6 +36,10 @@ body {
     font-family: 'Slabo 27px', serif;
 }
 
+.item2 {
+    font-size: 24px;
+}
+
 .button {
     display: inline-block;
     border-radius: 4px;

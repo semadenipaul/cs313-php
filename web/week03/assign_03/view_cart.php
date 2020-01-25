@@ -39,7 +39,7 @@
                 echo "$" . $item . "<br>";
             }
 
-            echo "Your total is: " . $total;
+            echo "<br>" . "Your total is: " . $total;
             ?>
         </div>
         <div class="item3">
