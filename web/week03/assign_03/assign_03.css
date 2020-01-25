@@ -57,7 +57,7 @@ label {
     background-size: cover;
 }
 
-.item1 > img {
+.item1 > label {
     display: flex;
     flex-direction: row;
     width: 65%;
@@ -73,7 +73,7 @@ label {
     border-radius: 5px;
 }
 
-.item2 > img {
+.item2 > label {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -88,7 +88,7 @@ label {
     border-radius: 5px;
 }
 
-.item3 > img {
+.item3 > label {
     display: flex;
     flex-direction: row;
     width: 75%;
@@ -104,7 +104,7 @@ label {
     border-radius: 5px;
 }
 
-.item4 > img {
+.item4 > label {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -119,7 +119,7 @@ label {
     border-radius: 5px;
 }
 
-.item5 > img {
+.item5 > label {
     display: flex;
     flex-direction: row;
     width: 55%;
@@ -135,7 +135,7 @@ label {
     border-radius: 5px;
 }
 
-.item6 > img {
+.item6 > label {
     display: flex;
     flex-direction: row;
     width: 70%;
