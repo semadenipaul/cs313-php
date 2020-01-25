@@ -44,7 +44,7 @@ body {
     flex-wrap: wrap;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin: 25%;
+    margin: 0 25%;
 }
 
 input[type=text] {
