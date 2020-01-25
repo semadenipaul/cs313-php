@@ -16,8 +16,7 @@
         <div class="item1">
             <h1>Checkout</h1>
             <?php
-            $_SESSION["total"] = $total;
-            $total = sanitize_input('total_amount');
+            $total = sanitize_input($_SESSION["total"]);
 
             function sanitize_input($input)
             {
@@ -34,7 +33,7 @@
         </div>
 
         <div class="item2">
-            <?php echo "Please enter your shipping address: "?>
+            <?php echo "Please enter your shipping address: <br>"?>
             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
             <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
             <label for="city"><i class="fa fa-institution"></i> City</label>
