@@ -16,9 +16,7 @@ body {
     background-color: black;
 }
 
-label {
-    cursor: default;
-}
+
 
 .grid-container {
     display: grid;
