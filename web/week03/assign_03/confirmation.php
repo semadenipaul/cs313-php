@@ -40,9 +40,10 @@
             $value = $_GET["validate"];
             $value2 = $_GET["reset"];
             if ($value2 == 1) {
-                exit("Your order has been cancelled. Click on this link to return to homepage: https://thawing-woodland-23025.herokuapp.com/week03/assign_03/assign_03.html");
+                header("Location: https://thawing-woodland-23025.herokuapp.com/week03/assign_03/assign_03.html");
+                exit;
             }
-            
+
             echo "Your order has been CONFIRMED! <br>";
             echo $_SESSION["item"] . "</b>";
             echo "<b>Your total is: " . $_SESSION["total"] . "</b>";
