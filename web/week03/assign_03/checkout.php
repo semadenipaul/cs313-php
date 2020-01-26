@@ -19,9 +19,17 @@
         </div>
 
         <div class="item2">
-            <?php echo "Please enter your shipping address: <br>" ?>
-            <br>
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <?php 
+            $cancel = $_GET["reset"];
+            if ($cancel == 0) {
+                exit ("Your order has been cancelled.");
+            }
+            ?>
+            <?php
+            echo "Please enter your shipping address: <br>";
+            echo "<br>";
+            ?>
+            <label for="'adr'"><i class="'fa fa-address-card-o'"></i> Address</label>
             <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"><br>
             <label for="city"><i class="fa fa-institution"></i> City</label>
             <input type="text" id="city" name="city" placeholder="New York"><br>
@@ -30,14 +38,15 @@
             <label for="zip">Zip</label>
             <input type="text" id="zip" name="zip" placeholder="10001"><br>
 
+
             <?php
             echo $_SESSION["item"] . "</b>";
             echo "<br>" . "<b>Your total is: " . $_SESSION["total"] . "</b>";
             ?>
         </div>
         <div class="item3">
-            <button class="button" name="validate" type="submit"><span>Complete Purchase</span></button>
-            <button class="button2" name="reset" type="submit"><span>Return to Cart</span></button>
+            <button class="button" name="validate" type="submit" value="1"><span>Complete Purchase</span></button>
+            <button class="button2" name="reset" type="submit" value="0"><span>Return to Cart</span></button>
         </div>
         <div class="item4">
             <p><a href="assign_03.html">| Browse Items</a> <a href="view_cart.php">| Shopping Cart</a> | Checkout<br> <br>Created at Brigham Young University Idaho <br> January 23, 2020 &#169;</p>
