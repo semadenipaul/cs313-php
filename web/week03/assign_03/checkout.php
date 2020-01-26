@@ -46,7 +46,7 @@
         </div>
         <div class="item3">
             <button class="button" name="validate" type="submit" value="1"><span>Complete Purchase</span></button>
-            <button class="button2" name="reset" type="submit" value="0"><span>Return to Cart</span></button>
+            <button class="button2" name="reset" type="submit" value="1"><span>Return to Cart</span></button>
         </div>
         <div class="item4">
             <p><a href="assign_03.html">| Browse Items</a> <a href="view_cart.php">| Shopping Cart</a> | Checkout<br> <br>Created at Brigham Young University Idaho <br> January 23, 2020 &#169;</p>
