@@ -21,7 +21,7 @@
         <div class="item2">
             <?php 
             $cancel = $_GET["reset"];
-            if ($cancel == 0) {
+            if ($cancel == 1) {
                 exit ("Your order has been cancelled.");
             }
             ?>

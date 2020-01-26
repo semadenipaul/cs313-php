@@ -45,7 +45,7 @@
         </div>
         <div class="item3">
             <button class="button" name="validate" type="submit" value="1"><span>Proceed to Checkout</span></button>
-            <button class="button2" name="reset" type="submit" value="0"><span>Cancel Order</span></button>
+            <button class="button2" name="reset" type="submit" value="1"><span>Cancel Order</span></button>
         </div>
         <div class="item4">
             <p><a href="assign_03.html">| Browse Items</a> | Shopping Cart <br> <br>Created at Brigham Young University Idaho <br> January 23, 2020 &#169;</p>
