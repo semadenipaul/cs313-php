@@ -47,7 +47,7 @@
                 echo $address . "<br>" . $city . ", " . $state . " " . $zip;
             }
             else if ($value2 == 0) {
-                readfile("https://thawing-woodland-23025.herokuapp.com/week03/assign_03/assign_03.html");
+                header("https://thawing-woodland-23025.herokuapp.com/week03/assign_03/assign_03.html");
             }
             else {
                 echo "<h3>Your order has been cancelled.</h3>";
