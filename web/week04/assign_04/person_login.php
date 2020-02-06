@@ -1,0 +1,56 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="login_style_sheet.css">
+    <title>National Parks</title>
+</head>
+
+<body>
+    <form action="" method="POST" class="grid-container">
+        <div class="item1">
+            <h1>Explore U.S. National Parks</h1>
+        </div>
+        <div class="item2">
+            <ul>
+                <li>Home Page</li>
+                <li>Home Page</li>
+                <li>Home Page</li>
+                <li>Home Page</li>
+                <li>Home Page</li>
+            </ul>
+        </div>
+        <div class="item3">
+            <p>Email: <input type="text" name="email"></p>
+            <p>City: <input type="text" name="city"></p>
+            <p>State: <input type="text" name="state"></p>
+        </div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+    </form>
+
+    <?php
+    require "dbConnect.php";
+    $db = get_db();
+
+    $person = $db->prepare("SELECT * FROM person");
+    $person->execute();
+
+    while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
+        $email = $row['person_email'];
+        $new_person = $row['new_person'];
+        $location = $row['person_location'];
+
+        echo "<p><br>$email<br> $new_person <br> $location <br></p>";
+    }
+    ?>
+</body>
+
+</html>
