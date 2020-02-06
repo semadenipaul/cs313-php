@@ -19,7 +19,7 @@
     $images = $row['image'];
     $names = $row['name'];
 
-    echo "$names <br> $images</p>";
+    echo "$names <br> <img src=\"$images\"></p>";
   }
   ?>
 
