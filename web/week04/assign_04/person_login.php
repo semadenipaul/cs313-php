@@ -31,6 +31,7 @@ session_start();
             <p>Email: <input type="text" name="email"></p>
             <p>City: <input type="text" name="city"></p>
             <p>State: <input type="text" name="state"></p>
+            <button type="submit" value="submit">Submit</button>
         </div>
         <div class="item4"></div>
         <div class="item5"></div>
