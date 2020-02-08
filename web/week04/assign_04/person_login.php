@@ -33,7 +33,6 @@ session_start();
             <p>State: <input type="text" name="state"></p>
             <button type="submit" value="submit">Submit</button>
         </div>
-        <div class="item4"></div>
         <div class="item5"></div>
     </form>
 
@@ -51,7 +50,7 @@ session_start();
         $new_person = $row['new_person'];
         $location = $row['person_location'];
 
-        echo "<p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p>";
+        echo "<div class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
     }
     ?>
 </body>
