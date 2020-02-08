@@ -20,11 +20,11 @@ session_start();
         </div>
         <div class="item2">
             <ul>
-                <li>Home Page</li>
-                <li>Home Page</li>
-                <li>Home Page</li>
-                <li>Home Page</li>
-                <li>Home Page</li>
+                <li><a href="">Home Page</a></li>
+                <li><a href="">Home Page</a></li>
+                <li><a href="">Home Page</a></li>
+                <li><a href="">Home Page</a></li>
+                <li><a href="">Home Page</a></li>
             </ul>
         </div>
         <div class="item3">
