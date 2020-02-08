@@ -34,6 +34,9 @@
 .grid-container > .item1 {
     background-image: url("background.jpg");
     background-size: 100%;
+    text-align: center;
+    color:black;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 body {
