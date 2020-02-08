@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="login_style_sheet.css">
+    <link rel="stylesheet" href="home_page.css">
     <title>National Parks</title>
 </head>
 
