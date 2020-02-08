@@ -23,12 +23,16 @@
 }
   
 .grid-container > div, form {
-    background-color: white;
+    background-color: black;
     text-align: left;
-    color:black;
+    color:white;
     font-family: 'Gentium Book Basic', serif;
     padding: 10px;
     border-radius: 5px;
+}
+
+body {
+    background-color: black;
 }
 
 .item2 {
