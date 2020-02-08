@@ -4,7 +4,7 @@
 
 .item1 { grid-area: header; }
 .item2 { grid-area: menu_bar; }
-.item3 { grid-area: login; }
+.item3 { grid-area: pictures; }
 .item4 { grid-area: info; }
 .item5 { grid-area: footer; }
 
@@ -13,7 +13,7 @@
     grid-template-areas:
       'header header header header'
       'menu_bar menu_bar menu_bar menu_bar'
-      'login login login login'
+      'pictures pictures pictures pictures'
       'info info info info'
       'footer footer footer footer';
     grid-gap: 5px;
@@ -22,6 +22,10 @@
     border-radius: 5px;
 }
   
+.grid-container > .item1 {
+    background-image: image('background.jpg');
+}
+
 .grid-container > div, form {
     background-color: white;
     text-align: left;
