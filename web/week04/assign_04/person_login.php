@@ -38,7 +38,7 @@ session_start();
     </form>
 
     <?php
-    require "dbConnect.php";
+    require "db_connect.php";
     $db = get_db();
 
     $person = $db->prepare("SELECT * FROM person");
