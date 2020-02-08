@@ -1,74 +1,95 @@
 /*DROP TABLE person;
 DROP TABLE keywords;
-DROP TABLE previous_parks_visited;
 DROP TABLE national_parks;
+DROP TABLE previous_parks_visited;
 DROP TABLE person_reviews;*/
 
-CREATE TABLE person
+/*CREATE TABLE person
 (
-    id INT NOT NULL,
+    id SERIAL NOT NULL,
     USER_NAME VARCHAR(80) NOT NULL,
+    password VARCHAR(100) NOT NULL,
     person_email VARCHAR(100),
     new_person BOOLEAN,
     person_location VARCHAR(256),
-    password VARCHAR(100) NOT NULL,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE keywords
 (
-    key_words_id INT, --primary key
-    --person INT REFERENCES person(id),
-    --location_person VARCHAR REFERENCES person(person_location),
-    --is_new_person BOOLEAN REFERENCES person(new_person),
+    key_words_id SERIAL NOT NULL,
+    person INT NOT NULL REFERENCES person(id),
     keywords TEXT,
     PRIMARY KEY (key_words_id)
 );
 
-CREATE TABLE previous_parks_visited
-(
-    previous_parks_id INT NOT NULL,
-    --person INT REFERENCES person(id),
-    --is_new_person BOOLEAN REFERENCES person(new_person),
-    --national_park INT REFERENCES national_parks(id),
-    PRIMARY KEY (previous_parks_id)
-);
-
-/*CREATE TABLE average_cost_previous_trip
-(
-    average_cost_id INT,
-    previous_parks_visited INT REFERENCES previous_parks_visited(previous_parks_id),
-    --person INT REFERENCES person(id),
-    PRIMARY KEY (average_cost_id)
-);
-
-CREATE TABLE previous_parks_visited_average_cost
-(
-    --previous_parks_visited INT REFERENCES previous_parks_visited(previous_parks_id),
-    average_cost INT REFERENCES average_cost_previous_trip(average_cost_id)
-    --location_person VARCHAR REFERENCES person(person_location)
-);*/
-
 CREATE TABLE national_parks
 (
-    national_parks_id INT NOT NULL,
+    national_parks_id SERIAL NOT NULL,
+    national_park TEXT,
     key_words INT REFERENCES keywords(key_words_id),
-    --person INT REFERENCES person(id),
+    --person INT NOT NULL REFERENCES person(id),
     keywords_to_describe_national_parks TEXT,
-    previous_parks_visited INT REFERENCES previous_parks_visited(previous_parks_id),
+    --previous_parks_visited INT NOT NULL REFERENCES previous_parks_visited(previous_parks_id),
     PRIMARY KEY (national_parks_id)
 );
 
+CREATE TABLE previous_parks_visited
+(
+    previous_parks_id SERIAL NOT NULL,
+    person INT NOT NULL REFERENCES person(id),
+    national_parks INT NOT NULL REFERENCES national_parks(national_parks_id),
+    PRIMARY KEY (previous_parks_id)
+);
 
 CREATE TABLE person_reviews
 (
-    reviews_id INT NOT NULL,
+    reviews_id SERIAL NOT NULL,
+    previous_parks_visited INT NOT NULL REFERENCES previous_parks_visited(previous_parks_id),
     reviews_content TEXT,
-    --person INT REFERENCES person(id), --foreign key
-    previous_parks_visited INT REFERENCES previous_parks_visited(previous_parks_id),
-    --average_cost INT REFERENCES average_cost_previous_trip(average_cost_id),
+    --person INT NOT NULL REFERENCES person(id),
     PRIMARY KEY (reviews_id)
-);
+);*/
 
-INSERT INTO person (person_email, new_person, person_location)
-VALUES ('sem16002@byui.edu', True, 'Afton, Wyoming');
+INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)
+VALUES ('MikeMizouski','d@tswrite88','mike@monsters.inc', True, 'Munster, Wisconsin');
+INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)
+VALUES ('TomBrady','superbowls6','patriots@nfl.com', False, 'Boston, MA');
+INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)
+VALUES ('DonovanMitchell','allstar#1','teamplayer@utahJazz.org', True, 'Salt Lake City, Utah');
+INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)
+VALUES ('semadenipaulo','brazilsdastuff44','soccor4life@gmail.com', False, 'Sao Paolo, Brazil');
+INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)
+VALUES ('SatynaraynaNakkapalli','indiatechlife5','cricketisdabest@yahoo.com', True, 'Indranagar, Bengaluru, India');
+
+INSERT INTO keywords (person, keywords)
+VALUES (1, 'red, canyon, rocks, jeep, sunny, Utah');
+INSERT INTO keywords (person, keywords)
+VALUES (2, 'snow, mountains, ski, cold, white, Wyoming');
+INSERT INTO keywords (person, keywords)
+VALUES (3, 'humid, tropical, sunny, palm trees, Hawaii');
+INSERT INTO keywords (person, keywords)
+VALUES (4, 'geysers, animals, fishing, forest, mountains, Montana');
+INSERT INTO keywords (person, keywords)
+VALUES (5, 'waterfalls, rivers, bridges, swimming, New York');
+
+INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
+VALUES ('Grand Teton National Park', 2, 'snow, Colorado, Utah, Wyoming, cold, ski, snowboard, sledding, ice fishing');
+INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
+VALUES ('Glacier National Park', 4, 'buffalo, deer, elk, Montana, Bamff, geysers. mountains, fishing, forest');
+INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
+VALUES ('Haleakalā National Park', 3, 'volcanoes, waterfalls, beach, palm trees, sunny, humid, tropical, pineapple, Hawaii, Florida, Georgia');
+INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
+VALUES ('Arches National Park', 1, 'arches, jeep, red, canyon, sunny, Utah, rattlesnakes');
+INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
+VALUES ('Niagra Falls National Park', 5, 'waterfalls, rivers, ferry, bridges, New York, Toronto, Canada');
+
+INSERT INTO previous_parks_visited (person, national_parks)
+VALUES (2, 4);
+INSERT INTO previous_parks_visited (person, national_parks)
+VALUES (4, 1);
+
+INSERT INTO person_reviews (previous_parks_visited, reviews_content)
+VALUES (2, 'I loved visiting Arches National Park! My kids loked playing in the red sand. I would recommend setting aside 4-5 weeks to see all of the amazing sights. 5/5 STARS');
+INSERT INTO person_reviews (previous_parks_visited, reviews_content)
+VALUES (1, 'Grand Teton National Park was spectacular! It was a little dangerous with all of the bears wandering around, but as long as you do not feed the bears, you will be safe. 4/5 STARS');

@@ -45,11 +45,13 @@ session_start();
     $person->execute();
 
     while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
+        $user_name = $row['USER_NAME'];
+        $password = $row['password'];
         $email = $row['person_email'];
         $new_person = $row['new_person'];
         $location = $row['person_location'];
 
-        echo "<p><br>$email<br> $new_person <br> $location <br></p>";
+        echo "<p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p>";
     }
     ?>
 </body>
