@@ -33,7 +33,7 @@
 
 .grid-container > .item1 {
     background-image: url("background.jpg");
-    background-position: center;
+    background-position: inherit;
 }
 
 body {
