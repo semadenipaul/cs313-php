@@ -33,7 +33,7 @@
 
 .grid-container > .item1 {
     background-image: url("background.jpg");
-    background-blend-mode: saturation;
+    background-size: 100%;
 }
 
 body {
