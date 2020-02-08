@@ -10,8 +10,6 @@
 
 .grid-container {
     display: grid;
-    width: 75%;
-    margin: auto;
     grid-template-areas:
       'header header header header'
       'menu_bar menu_bar menu_bar menu_bar'
@@ -33,101 +31,28 @@
     border-radius: 5px;
 }
 
-table {
-    width:100%;
+.item2 {
+    overflow: hidden;
+    background-color: black;
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-}
-
-.item5 ul {
-    display: flex;
-    flex-direction: row;
-}
-  
-.item5 li {
+.item2 li {
     display: block;
 }
 
-.item5 img {
-    width: 102.75px;
-    height: 75px;
-}
-
-.button {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: green;
-    border: none;
-    color: #FFFFFF;
+.item2 a {
+    float: left;
+    display: block;
+    color: white;
     text-align: center;
-    font-size: 16px;
-    padding: 15px;
-    width: 20%;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
+    font-size: 20px;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.button2 {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: red;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 16px;
-    padding: 15px;
-    width: 20%;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.button3 {
-    display: inline-block;
-    border-radius: 4px;
-    background-color:gray;
-    border: none;
+.item2 a:hover {
+    background-color: rgb(250, 249, 248);
+    zoom: 1.1;
     color: black;
-    text-align: center;
-    font-size: 16px;
-    padding: 15px;
-    width: 20%;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
+    border-radius: 5px;
 }
-  
-.button span, .button2 span, .button3 span{
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-  
-.button span:after, .button2 span:after, .button3 span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-  
-.button:hover span, .button2:hover span, .button3:hover span {
-    padding-right: 25px;
-}
-  
-.button:hover  span:after, .button2:hover span:after, .button3:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-

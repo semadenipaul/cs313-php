@@ -51,7 +51,7 @@ CREATE TABLE person_reviews
     PRIMARY KEY (reviews_id)
 );*/
 
-INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)
+/*INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)
 VALUES ('MikeMizouski','d@tswrite88','mike@monsters.inc', True, 'Munster, Wisconsin');
 INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)
 VALUES ('TomBrady','superbowls6','patriots@nfl.com', False, 'Boston, MA');
@@ -93,3 +93,4 @@ INSERT INTO person_reviews (previous_parks_visited, reviews_content)
 VALUES (2, 'I loved visiting Arches National Park! My kids loked playing in the red sand. I would recommend setting aside 4-5 weeks to see all of the amazing sights. 5/5 STARS');
 INSERT INTO person_reviews (previous_parks_visited, reviews_content)
 VALUES (1, 'Grand Teton National Park was spectacular! It was a little dangerous with all of the bears wandering around, but as long as you do not feed the bears, you will be safe. 4/5 STARS');
+*/
