@@ -139,56 +139,45 @@ body {
 }
 
 #image1 {
-    background-image: url('alaska.jpg');
-    background-size: 100%;
+    background-image: url('alaska.jpg');  
 }
 #image2 {
     -webkit-animation-delay: -10s;
     background-image: url('yosemite.jpg');
-    background-size: 100%;
 }
 #image3 {
     -webkit-animation-delay: -20s;
     background-image: url('arcadia.jpg');
-    background-size: 100%;
 }
 #image4 {
     -webkit-animation-delay: -30s;
     background-image: url('yellowstone.gif');
-    background-size: 100%;
 }
 #image5 {
     -webkit-animation-delay: -40s;
     background-image: url('arches.jpg');
-    background-size: 100%;
 }
 #image6 {
     -webkit-animation-delay: -50s;
     background-image: url('teton.jpg');
-    background-size: 100%;
 }
 #image7 {
     -webkit-animation-delay: -60s;
     background-image: url('canyonlands.jpg');
-    background-size: 100%;
 }
 #image8 {
     -webkit-animation-delay: -70s;
     background-image: url('smokymtn.jpg');
-    background-size: 100%;
 }
 #image9 {
     -webkit-animation-delay: -80s;
     background-image: url('everglades.jpg');
-    background-size: 100%;
 }
 #image10 {
     -webkit-animation-delay: -90s;
     background-image: url('hawaii.jpg');
-    background-size: 100%;
 }
 #image11 {
     -webkit-animation-delay: -100s;
     background-image: url('glacier.jpg');
-    background-size: 100%;
 }
