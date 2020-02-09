@@ -86,9 +86,71 @@ body {
 
 .grid-container > img {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+}
+
+.item3 {
     width: 50%;
     height: auto;
+    display: flex;
+}
 
+.item4 {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.item5 {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.item6 {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.item7 {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.item8 {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.item9 {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.item10 {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.item11 {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.item12 {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.item13 {
+    width: 50%;
+    height: auto;
+    display: flex;
 }
