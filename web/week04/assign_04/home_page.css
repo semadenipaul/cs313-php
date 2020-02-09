@@ -37,7 +37,7 @@
     text-align: center;
     color:black;
     font-family: 'Gentium Book Basic', serif;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 250px;
 }
 
@@ -69,4 +69,43 @@ body {
     zoom: 1.1;
     color: black;
     border-radius: 5px;
+}
+
+.item3 {
+    position:relative;
+    height:281px;
+    width:450px;
+    margin:0 auto;
+}
+  
+.item3 img {
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+  
+@keyframes cf3FadeInOut {
+    0% {
+    opacity:1;
+  }
+  45% {
+  opacity:1;
+  }
+  55% {
+  opacity:0;
+  }
+  100% {
+  opacity:0;
+  }
+}
+  
+.item3 img.top {
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
 }
