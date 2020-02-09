@@ -34,6 +34,7 @@
 .grid-container > .item1 {
     background-image: url("forest_silouhette.jpg");
     background-size: 100%;
+    display: flex;
     text-align: center;
     color:black;
     font-family: 'Gentium Book Basic', serif;
@@ -110,8 +111,10 @@ body {
   animation-direction: alternate;
 }*/
 
-.item3 img {
-    position: fixed;
+.item3 > img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
     -webkit-animation-name: fade;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 100s;
