@@ -27,8 +27,8 @@ session_start();
             </ul>
         </div>
         <div class="item3">
-            <img class="image1" src="/images/alaska.jpg" />
-            <img class="image2" src="/images/yosemite.jpg" />
+            <img class="image1" src="alaska.jpg" />
+            <img class="image2" src="yosemite.jpg" />
             <img class="image3" src="/images/arcadia.jpg" />
             <img class="image4" src="/images/yellowstone.jpg" />
             <img class="image5" src="/images/arches.jpg" />
