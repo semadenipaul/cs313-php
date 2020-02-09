@@ -29,15 +29,15 @@ session_start();
         <div class="item3">
             <img class="image1" src="alaska.jpg" />
             <img class="image2" src="yosemite.jpg" />
-            <img class="image3" src="/images/arcadia.jpg" />
-            <img class="image4" src="/images/yellowstone.jpg" />
-            <img class="image5" src="/images/arches.jpg" />
-            <img class="image6" src="/images/teton.jpg" />
-            <img class="image7" src="/images/canyonlands.jpg" />
-            <img class="image8" src="/images/smokymtn.jpg" />
-            <img class="image9" src="/images/everglades.jpg" />
-            <img class="image10" src="/images/hawaii.jpg" />
-            <img class="image11" src="/images/glacier.jpg" />
+            <img class="image3" src="arcadia.jpg" />
+            <img class="image4" src="yellowstone.gif" />
+            <img class="image5" src="arches.jpg" />
+            <img class="image6" src="teton.jpg" />
+            <img class="image7" src="canyonlands.jpg" />
+            <img class="image8" src="smokymtn.jpg" />
+            <img class="image9" src="everglades.jpg" />
+            <img class="image10" src="hawaii.jpg" />
+            <img class="image11" src="glacier.jpg" />
         </div>
         <div class="item4"></div>
         <div class="item5"></div>
