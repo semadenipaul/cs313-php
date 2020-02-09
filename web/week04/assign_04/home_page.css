@@ -110,22 +110,14 @@ body {
   animation-direction: alternate;
 }*/
 
-.item3 {
-    position:absolute;
-    top:0px;
-    left:50%;
-    margin:auto;
-}
 .item3 img {
-    position:absolute;
-    
-    top:0;
+    position: fixed;
     -webkit-animation-name: fade;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 6s;
+    -webkit-animation-duration: 100s;
     animation-name: fade;
     animation-iteration-count: infinite;
-    animation-duration: 6s;
+    animation-duration: 100s;
 }
 
 @-webkit-keyframes fade {
