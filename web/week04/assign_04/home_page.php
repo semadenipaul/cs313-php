@@ -42,7 +42,6 @@ session_start();
         <div class="item4"></div>
         <div class="item5"></div>
     </form>
-    <script src="home_page.js"></script>
 </body>
 
 </html>

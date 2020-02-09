@@ -77,9 +77,9 @@ body {
     overflow: hidden;
     position: relative;
     width: 100vw;
-  }
+}
   
-  .item3 img {
+.item3 img {
     height: 100%;
     left: 0;
     object-fit: cover;
@@ -89,20 +89,20 @@ body {
     top: 0;
     width: 100%;
     z-index: -1;
-  }
+}
 
-  .item3 img.next {
+.item3 img.next {
     opacity: 1;
     z-index: 1;
-  }
+}
   
-  .item3 img.prev {
+.item3 img.prev {
     opacity: 1;
     z-index: 2;
-  }
+}
 
-  .item3 img.fade-out {
+.item3 img.fade-out {
     opacity: 0;
     transition: visibility 0s .5s, opacity .5s linear;
     visibility: hidden;
-  }
+}
