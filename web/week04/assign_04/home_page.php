@@ -26,7 +26,7 @@ session_start();
                 <li><a href="">About Us</a></li>
             </ul>
         </div>
-        <div class="item3">
+        <div class="item3" id="cf">
             <img class="image1" src="alaska.jpg" />
             <img class="image2" src="yosemite.jpg" />
             <img class="image3" src="arcadia.jpg" />
