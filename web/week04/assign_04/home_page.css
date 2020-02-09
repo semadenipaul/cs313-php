@@ -112,7 +112,7 @@ body {
 }*/
 
 .item3 > img {
-    position: -ms-page;
+    position: absolute;
     width: 100%;
     height: auto;
     border-radius: 5px;
