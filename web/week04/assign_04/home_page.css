@@ -83,3 +83,12 @@ body {
     color: black;
     border-radius: 5px;
 }
+
+.grid-container > img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    height: auto;
+
+}
