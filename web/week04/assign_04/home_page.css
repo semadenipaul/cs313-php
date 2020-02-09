@@ -71,7 +71,7 @@ body {
     border-radius: 5px;
 }
 
-#cf {
+/*#cf {
     position:relative;
     height:281px;
     width:450px;
@@ -108,4 +108,81 @@ body {
   animation-iteration-count: infinite;
   animation-duration: 10s;
   animation-direction: alternate;
+}*/
+
+.item3 {
+    position:absolute;
+    top:0px;
+    left:50%;
+    margin:auto;
+}
+.item3 img {
+    position:absolute;
+    left:-65px;
+    top:0;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#image1 {
+    background-image: url('alaska.jpg');
+}
+#image2 {
+    -webkit-animation-delay: -10s;
+    background-image: url('yosemite.jpg');
+}
+#image3 {
+    -webkit-animation-delay: -20s;
+    background-image: url('arcadia.jpg');
+}
+#image4 {
+    -webkit-animation-delay: -30s;
+    background-image: url('yellowstone.gif');
+}
+#image5 {
+    -webkit-animation-delay: -40s;
+    background-image: url('arches.jpg');
+}
+#image6 {
+    -webkit-animation-delay: -50s;
+    background-image: url('teton.jpg');
+}
+#image7 {
+    -webkit-animation-delay: -60s;
+    background-image: url('canyonlands.jpg');
+}
+#image8 {
+    -webkit-animation-delay: -70s;
+    background-image: url('smokymtn.jpg');
+}
+#image9 {
+    -webkit-animation-delay: -80s;
+    background-image: url('everglades.jpg');
+}
+#image10 {
+    -webkit-animation-delay: -90s;
+    background-image: url('hawaii.jpg');
+}
+#image11 {
+    -webkit-animation-delay: -100s;
+    background-image: url('glacier.jpg');
 }
