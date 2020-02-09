@@ -21,13 +21,16 @@
 .grid-container {
     display: grid;
     grid-template-areas:
-      'header header header header'
-      'menu_bar menu_bar menu_bar menu_bar'
-      'pictures1 pictures2 pictures3 pictures4'
-      'pictures5 pictures6 pictures7 pictures8'
-      'pictures9 pictures10 pictures11 pictures11'
-      'info info info info'
-      'footer footer footer footer';
+      'header header'
+      'menu_bar menu_bar'
+      'pictures1 pictures2'
+      'pictures3 pictures4'
+      'pictures5 pictures6'
+      'pictures7 pictures8'
+      'pictures9 pictures10'
+      'pictures11 pictures11'
+      'info info'
+      'footer footer';
     grid-gap: 5px;
     background-color: black;
     padding: 5px;
