@@ -84,10 +84,10 @@ body {
     border-radius: 5px;
 }
 
-.grid-container > img {
+/*.grid-container > img {
     display: flex;
     flex-direction: row;
-}
+}*/
 
 .item3 {
     width: 25%;
