@@ -72,74 +72,37 @@ body {
     border-radius: 5px;
 }
 
-.item3 > img {
+.item3 {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+  }
+  
+  .item3 img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
     position: absolute;
+    top: 0;
     width: 100%;
-    height: auto;
-    border-radius: 5px;
-    -webkit-animation-name: fade;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 100s;
-    animation-name: fade;
-    animation-iteration-count: infinite;
-    animation-duration: 100s;
-}
+    z-index: -1;
+  }
 
-@-webkit-keyframes fade {
-    0% {opacity: 0;}
-    20% {opacity: 1;}
-    33% {opacity: 1;}
-    53% {opacity: 0;}
-    100% {opacity: 0;}
-}
-@keyframes fade {
-    0% {opacity: 0;}
-    20% {opacity: 1;}
-    33% {opacity: 1;}
-    53% {opacity: 0;}
-    100% {opacity: 0;}
-}
+  .item3 img.next {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .item3 img.prev {
+    opacity: 1;
+    z-index: 2;
+  }
 
-/*#image1 {
-    background-image: url('alaska.jpg');  
-}
-#image2 {
-    -webkit-animation-delay: -10s;
-    background-image: url('yosemite.jpg');
-}
-#image3 {
-    -webkit-animation-delay: -20s;
-    background-image: url('arcadia.jpg');
-}
-#image4 {
-    -webkit-animation-delay: -30s;
-    background-image: url('yellowstone.gif');
-}
-#image5 {
-    -webkit-animation-delay: -40s;
-    background-image: url('arches.jpg');
-}
-#image6 {
-    -webkit-animation-delay: -50s;
-    background-image: url('teton.jpg');
-}
-#image7 {
-    -webkit-animation-delay: -60s;
-    background-image: url('canyonlands.jpg');
-}
-#image8 {
-    -webkit-animation-delay: -70s;
-    background-image: url('smokymtn.jpg');
-}
-#image9 {
-    -webkit-animation-delay: -80s;
-    background-image: url('everglades.jpg');
-}
-#image10 {
-    -webkit-animation-delay: -90s;
-    background-image: url('hawaii.jpg');
-}
-#image11 {
-    -webkit-animation-delay: -100s;
-    background-image: url('glacier.jpg');
-}*/
+  .item3 img.fade-out {
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
+    visibility: hidden;
+  }
