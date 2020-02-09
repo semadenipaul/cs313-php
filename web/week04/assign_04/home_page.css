@@ -73,7 +73,7 @@ body {
 }
 
 .item3 > img {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -100,7 +100,7 @@ body {
     100% {opacity: 0;}
 }
 
-#image1 {
+/*#image1 {
     background-image: url('alaska.jpg');  
 }
 #image2 {
@@ -142,4 +142,4 @@ body {
 #image11 {
     -webkit-animation-delay: -100s;
     background-image: url('glacier.jpg');
-}
+}*/
