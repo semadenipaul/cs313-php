@@ -26,7 +26,17 @@ session_start();
                 <li><a href="">About Us</a></li>
             </ul>
         </div>
-        
+        <div class="item3"> <img id="image1" src="alaska.jpg" /></div>
+        <div class="item4"> <img id="image2" src="yosemite.jpg" /></div>
+        <div class="item5"> <img id="image3" src="arcadia.jpg" /></div>
+        <div class="item6"> <img id="image4" src="yellowstone.gif" /></div>
+        <div class="item7"><img id="image5" src="arches.jpg" /></div>
+        <div class="item8"><img id="image6" src="teton.jpg" /></div>
+        <div class="item9"><img id="image7" src="canyonlands.jpg" /></div>
+        <div class="item10"><img id="image8" src="smokymtn.jpg" /></div>
+        <div class="item11"><img id="image9" src="everglades.jpg" /></div>
+        <div class="item12"><img id="image10" src="hawaii.jpg" /></div>
+        <div class="item13"><img id="image11" src="glacier.jpg" /></div>
 
         <div class="item14"></div>
         <div class="item15"></div>
