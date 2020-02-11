@@ -72,10 +72,11 @@ body {
     border-radius: 5px;
 }
 
+/*reference: https://www.the-art-of-web.com/css/fading-slideshow-no-jquery/ */
 .item3 {
-    margin: 1em auto;
-    width: 382px;
-    height: 292px;
+    margin: auto;
+    width: 100%;
+    height: auto;
 }
 
 .item3 a {
@@ -83,8 +84,8 @@ body {
 }
 .item3 a img {
     padding: 10px;
-    border: 1px solid #ccc;
-    background: #fff;
+    border: 1px solid black;
+    background: black;
 }
 
 .item3 a:nth-of-type(1) {
