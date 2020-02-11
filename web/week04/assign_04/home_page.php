@@ -30,9 +30,9 @@ session_start();
             <a href="alaska.jpg"><img id="image1" src="alaska.jpg" /></a>
             <a href="yosemite.jpg"><img id="image2" src="yosemite.jpg" /></a>
             <a href="arcadia.jpg"><img id="image3" src="arcadia.jpg" /></a>
-            <a href="yellowstone.jpg"><img id="image4" src="yellowstone.gif" /></a>
+            <a href="yellowstone.jpg"><img id="image4" src="yellowstone.jpg" /></a>
             <a href="arches.jpg"><img id="image5" src="arches.jpg" /></a>
-            <a href="teton.gif"><img id="image6" src="teton.jpg" /></a>
+            <a href="teton.gif"><img id="image6" src="teton.gif" /></a>
             <a href="canyonlands.jpg"><img id="image7" src="canyonlands.jpg" /></a>
             <a href="smokymtn.jpg"><img id="image8" src="smokymtn.jpg" /></a>
             <a href="everglades.jpg"><img id="image9" src="everglades.jpg" /></a>
