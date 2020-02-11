@@ -4,31 +4,16 @@
 
 .item1 { grid-area: header; }
 .item2 { grid-area: menu_bar; }
-.item3 { grid-area: pictures1; }
-.item4 { grid-area: pictures2; }
-.item5 { grid-area: pictures3; }
-.item6 { grid-area: pictures4; }
-.item7 { grid-area: pictures5; }
-.item8 { grid-area: pictures6; }
-.item9 { grid-area: pictures7; }
-.item10 { grid-area: pictures8; }
-.item11 { grid-area: pictures9; }
-.item12 { grid-area: pictures10; }
-.item13 { grid-area: pictures11; }
-.item14 { grid-area: info; }
-.item15 { grid-area: footer; }
+.item3 { grid-area: pictures; }
+.item4 { grid-area: info; }
+.item5 { grid-area: footer; }
 
 .grid-container {
     display: grid;
     grid-template-areas:
       'header header'
       'menu_bar menu_bar'
-      'pictures1 pictures2'
-      'pictures3 pictures4'
-      'pictures5 pictures6'
-      'pictures7 pictures8'
-      'pictures9 pictures10'
-      'pictures11 pictures11'
+      'pictures pictures'
       'info info'
       'footer footer';
     grid-gap: 5px;
@@ -87,73 +72,35 @@ body {
     border-radius: 5px;
 }
 
-/*.grid-container > img {
-    display: flex;
-    flex-direction: row;
-}
-
 .item3 {
-    width: 10%;
-    height: auto;
-    display: flex;
+    margin: 1em auto;
+    width: 382px;
+    height: 292px;
 }
 
-.item4 {
-    width: 10%;
-    height: auto;
-    display: flex;
+.item3 a {
+    position: absolute;
+}
+.item3 a img {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
 }
 
-.item5 {
-    width: 10%;
-    height: auto;
-    display: flex;
+.item3 a:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    z-index: 20;
+}
+.item3 a:nth-of-type(2) {
+    z-index: 10;
+}
+.item3 a:nth-of-type(n+3) {
+    display: none;
 }
 
-.item6 {
-    width: 10%;
-    height: auto;
-    display: flex;
+@keyframes fader {
+    from { opacity: 1.0; }
+    to   { opacity: 0.0; }
 }
-
-.item7 {
-    width: 10%;
-    height: auto;
-    display: flex;
-}
-
-.item8 {
-    width: 10%;
-    height: auto;
-    display: flex;
-}
-
-.item9 {
-    width: 10%;
-    height: auto;
-    display: flex;
-}
-
-.item10 {
-    width: 10%;
-    height: auto;
-    display: flex;
-}
-
-.item11 {
-    width: 10%;
-    height: auto;
-    display: flex;
-}
-
-.item12 {
-    width: 10%;
-    height: auto;
-    display: flex;
-}
-
-.item13 {
-    width: 10%;
-    height: auto;
-    display: flex;
-}*/
