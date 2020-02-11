@@ -80,7 +80,7 @@ body {
 }
 
 .item3 a {
-    position: absolute;
+    position: fixed;/*position: absolute;*/
 }
 .item3 a img {
     padding: 10px;
