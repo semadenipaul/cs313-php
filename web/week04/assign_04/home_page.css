@@ -80,11 +80,9 @@ body {
 }
 
 .item3 a {
-    display: flex;
     position: absolute;
 }
 .item3 a img {
-    padding: 10px;
     border: 1px solid black;
     background: black;
 }
