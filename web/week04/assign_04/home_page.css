@@ -11,11 +11,11 @@
 .grid-container {
     display: grid;
     grid-template-areas:
-      'header header'
-      'menu_bar menu_bar'
-      'pictures pictures'
-      'info info'
-      'footer footer';
+      'header'
+      'menu_bar'
+      'pictures'
+      'info'
+      'footer';
     grid-gap: 5px;
     background-color: black;
     padding: 5px;
