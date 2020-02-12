@@ -50,9 +50,7 @@
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 1400px;
-    
+    background-size: 100%
 }
 
 body {
