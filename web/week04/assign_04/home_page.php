@@ -41,7 +41,9 @@ session_start();
             <a href="glacier.jpg"><img id="image11" src="glacier.jpg" /></a>
         </div>
         <div class="item4"></div>
-        <div class="item5"></div>
+        <div class="item5">
+            <p>| HomePage <br> <br>Created at Brigham Young University Idaho <br> February 11, 2020 &#169;</p>
+        </div>
     </form>
     <script src="home_page.js"></script>
 </body>
