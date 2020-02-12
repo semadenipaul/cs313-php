@@ -4,7 +4,7 @@ $book = $_POST['book'];
 $chapter = $_POST['chapter'];
 $verse = $_POST['verse'];
 $content = $_POST['content'];
-$topics = $_POST['topics'];
+$topics = $_POST['topics[]'];
 
 require("dbConnect.php");
 $db = get_db();
@@ -12,7 +12,7 @@ $db = get_db();
 try
 {
 	// insert into database
-	$query = 'INSERT INTO Scriptures (book, chapter, verse) VALUES (:book, :chapter, :verse, :content)';
+	$query = 'INSERT INTO Scriptures (book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':book', $book);
 	$statement->bindValue(':chapter', $chapter);
@@ -34,5 +34,4 @@ catch (Exception $ex)
 }
 header("Location: display.php");
 
-die(); 
-?>
+die();
