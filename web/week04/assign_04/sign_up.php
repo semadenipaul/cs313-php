@@ -43,7 +43,7 @@ session_start();
     require "db_connect.php";
     $db = get_db();
 
-    $previous_parks = $db->prepare("SELECT * FROM previous_parks_visited");
+    $previous_parks = $db->prepare("SELECT * FROM previous_parks_visited ppv INNER JOIN person p ON ppv.previous_parks_id = p.id INNER JOIN national_parks np ON ppv.previous_parks_id = np.national_parks_id");
     $previous_parks->execute();
 
     while ($row = $previous_parks->fetch(PDO::FETCH_ASSOC)) {

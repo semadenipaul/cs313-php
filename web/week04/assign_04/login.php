@@ -50,7 +50,7 @@ session_start();
         $new_person = $row['new_person'];
         $location = $row['person_location'];
 
-        echo "<div class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
+        echo "<div style=\"color: white;\" class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
     }
     ?>
 </body>
