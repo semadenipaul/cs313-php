@@ -41,13 +41,6 @@
 }
 
 .grid-container>.item1 {
-    background-image: url("forest_silouhette.jpg");
-    min-height: 350px; 
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    padding-top: 10px;
-    padding-bottom: 200px;
     text-align: center;
     color: black;
     font-family: 'Cabin Sketch', cursive;

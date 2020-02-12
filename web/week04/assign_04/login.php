@@ -7,6 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="login_style_sheet.css">
     <title>Login</title>
 </head>
@@ -17,7 +18,7 @@ session_start();
         </div>
         <div class="item2">
             <ul>
-                <li><a href="">Home Page</a></li>
+                <li><a href="home_page.php">Home Page</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="">Sign Up</a></li>
                 <li><a href="">About Us</a></li>
