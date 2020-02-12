@@ -26,15 +26,15 @@
     display: grid;
     grid-template-areas: 'header header header header' 'menu_bar menu_bar menu_bar menu_bar' 'pictures pictures pictures pictures' 'info info info info' 'footer footer footer footer';
     grid-gap: 5px;
-    background-color: black;
+    background-color: white;
     padding: 5px;
     border-radius: 5px;
 }
 
 .grid-container>div, form {
-    background-color: black;
+    background-color: white;
     text-align: left;
-    color: white;
+    color: black;
     font-family: 'Cabin Sketch', cursive;
     padding: 10px;
     border-radius: 5px;
@@ -42,13 +42,13 @@
 
 .grid-container>.item1 {
     text-align: center;
-    color: white;
+    color: black;
     font-family: 'Cabin Sketch', cursive;
     font-size: 30px;
 }
 
 body {
-    background-color: white;
+    background-color: black;
 }
 
 .item2 {
