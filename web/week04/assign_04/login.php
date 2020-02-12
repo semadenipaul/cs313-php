@@ -14,7 +14,7 @@ session_start();
 <body>
 <form action="" method="POST" class="grid-container">
         <div class="item1">
-            <h1>Explore U.S. National Parks</h1>
+            <h1>Explore U.S. National Parks | Login</h1>
         </div>
         <div class="item2">
             <ul>
