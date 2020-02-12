@@ -9,7 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="login_style_sheet.css">
-    <title>Login</title>
+    <title>| Login</title>
 </head>
 <body>
 <form action="" method="POST" class="grid-container">
@@ -28,7 +28,7 @@ session_start();
         <div class="item3">
             <p>Username: <input type="text" name="username"/></p>
             <p>Password: <input type="text" name="password"/></p>
-            <button type="submit" value="submit">Sign In</button>
+            <button type="submit" value="submit">Sign In</button><br>
             <a href="">Forgot Password</a>
             <a href="">Forgot Username</a>
         </div>

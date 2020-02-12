@@ -33,7 +33,7 @@ session_start();
             <p>Email: <input type="text" name="email"/></p>
             <p>City: <input type="text" name="city"/></p>
             <p>State: <input type="text" name="state"/></p>
-            <button type="submit" value="submit">Submit</button>
+            <button type="submit" value="submit">Create Account</button>
         </div>
         <div class="item4"></div>
         <div class="item5"></div>
@@ -43,17 +43,14 @@ session_start();
     require "db_connect.php";
     $db = get_db();
 
-    $person = $db->prepare("SELECT * FROM person");
-    $person->execute();
+    $previous_parks = $db->prepare("SELECT * FROM previous_parks_visited");
+    $previous_parks->execute();
 
-    while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
-        $user_name = $row['USER_NAME'];
-        $password = $row['password'];
-        $email = $row['person_email'];
-        $new_person = $row['new_person'];
-        $location = $row['person_location'];
+    while ($row = $previous_parks->fetch(PDO::FETCH_ASSOC)) {
+        $person = $row['person'];
+        $national_parks = $row['national_parks'];
 
-        echo "<div class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
+        echo "<div style=\"color: white;\" class=\"item4\"><p>User: $person<br>Previous Parks Visited: $national_parks</p></div>";
     }
     ?>
 </body>
