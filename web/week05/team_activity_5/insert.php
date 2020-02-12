@@ -32,6 +32,6 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: display.php");
+header("Location: display.php/?scriptureId=$scriptureId");
 
 die();
