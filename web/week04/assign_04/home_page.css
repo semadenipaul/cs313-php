@@ -34,8 +34,8 @@
 .grid-container > .item1 {
     background-image: url("forest_silouhette.jpg");
     background-size: 100%;
-   
-    text-align: center;
+    display: flex;
+    text-align: right;
     color:black;
     font-family: 'Gentium Book Basic', serif;
     padding-top: 40px;
@@ -82,6 +82,7 @@ body {
 
 .item3 a {
     position: absolute;
+    border-radius: 5px;
 }
 .item3 a img {
     border: 1px solid black;
