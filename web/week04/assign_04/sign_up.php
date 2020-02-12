@@ -8,14 +8,14 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login_style_sheet.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="sign_up_style_sheet.css">
+    <title>| Sign Up</title>
 </head>
 <body>
 <form action="" method="POST" class="grid-container">
         <div class="item1">
             <p style="text-align: left; font-size: 20px;">Explore U.S. National Parks</p>
-            <h1>Login</h1>
+            <h1>Sign Up</h1>
         </div>
         <div class="item2">
             <ul>
@@ -27,10 +27,13 @@ session_start();
         </div>
         <div class="item3">
             <p>Username: <input type="text" name="username"/></p>
+            <p>Re-Enter Username: <input type="text" name="username2"/></p>
             <p>Password: <input type="text" name="password"/></p>
-            <button type="submit" value="submit">Sign In</button>
-            <a href="">Forgot Password</a>
-            <a href="">Forgot Username</a>
+            <p>Re-Enter Password: <input type="text" name="password2"/></p>
+            <p>Email: <input type="text" name="email"/></p>
+            <p>City: <input type="text" name="city"/></p>
+            <p>State: <input type="text" name="state"/></p>
+            <button type="submit" value="submit">Submit</button>
         </div>
         <div class="item4"></div>
         <div class="item5"></div>

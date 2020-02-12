@@ -21,9 +21,9 @@ session_start();
         </div>
         <div class="item2">
             <ul>
-                <li><a href="">Home Page</a></li>
+                <li><a href="home_page.php">Home Page</a></li>
                 <li><a href="login.php">Login</a></li>
-                <li><a href="">Sign Up</a></li>
+                <li><a href="sign_up.php">Sign Up</a></li>
                 <li><a href="">About Us</a></li>
             </ul>
         </div>
