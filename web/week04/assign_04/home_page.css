@@ -42,13 +42,13 @@
 
 .grid-container>.item1 {
     background-image: url("forest_silouhette.jpg");
-    max-height: 350px; 
+    min-height: 350px; 
     background-attachment: fixed;
-    background-position: center;
+    
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 200px;
 }
 
 body {
