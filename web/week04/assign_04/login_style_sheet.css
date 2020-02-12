@@ -2,37 +2,60 @@
     box-sizing: border-box;
 }
 
-.item1 { grid-area: header; }
-.item2 { grid-area: menu_bar; }
-.item3 { grid-area: login; }
-.item4 { grid-area: info; }
-.item5 { grid-area: footer; }
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu_bar;
+}
+
+.item3 {
+    grid-area: pictures;
+}
+
+.item4 {
+    grid-area: info;
+}
+
+.item5 {
+    grid-area: footer;
+}
 
 .grid-container {
     display: grid;
-    grid-template-areas:
-      'header header header header'
-      'menu_bar menu_bar menu_bar menu_bar'
-      'login login login login'
-      'info info info info'
-      'footer footer footer footer';
+    grid-template-areas: 'header header header header' 'menu_bar menu_bar menu_bar menu_bar' 'pictures pictures pictures pictures' 'info info info info' 'footer footer footer footer';
     grid-gap: 5px;
     background-color: black;
     padding: 5px;
     border-radius: 5px;
 }
-  
-.grid-container > div, form {
-    background-color: white;
+
+.grid-container>div, form {
+    background-color: black;
     text-align: left;
-    color:black;
-    font-family: 'Gentium Book Basic', serif;
+    color: white;
+    font-family: 'Cabin Sketch', cursive;
     padding: 10px;
     border-radius: 5px;
 }
 
+.grid-container>.item1 {
+    background-image: url("forest_silouhette.jpg");
+    min-height: 350px; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 10px;
+    padding-bottom: 200px;
+    text-align: center;
+    color: black;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 30px;
+}
+
 body {
-    background-color: white;
+    background-color: black;
 }
 
 .item2 {
