@@ -44,12 +44,13 @@
     text-align: center;
     color: black;
     font-family: 'Gentium Book Basic', serif;
-    
     background-image: url("forest_silouhette.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%
+    padding-top: 0px;
+    padding-bottom: 250px;
 }
 
 body {
