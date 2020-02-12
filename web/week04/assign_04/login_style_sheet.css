@@ -42,13 +42,13 @@
 
 .grid-container>.item1 {
     text-align: center;
-    color: black;
+    color: white;
     font-family: 'Cabin Sketch', cursive;
     font-size: 30px;
 }
 
 body {
-    background-color: black;
+    background-color: white;
 }
 
 .item2 {

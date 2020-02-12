@@ -25,9 +25,13 @@ session_start();
             </ul>
         </div>
         <div class="item3">
-            <p>Email: <input type="text" name="email"></p>
-            <p>City: <input type="text" name="city"></p>
-            <p>State: <input type="text" name="state"></p>
+            <p>Username: <input type="text" name="username"/></p>
+            <p>Re-Enter Username: <input type="text" name="username2"/></p>
+            <p>Password: <input type="text" name="password"/></p>
+            <p>Re-Enter Password: <input type="text" name="password2"/></p>
+            <p>Email: <input type="text" name="email"/></p>
+            <p>City: <input type="text" name="city"/></p>
+            <p>State: <input type="text" name="state"/></p>
             <button type="submit" value="submit">Submit</button>
         </div>
         <div class="item4"></div>
