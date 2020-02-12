@@ -2,41 +2,53 @@
     box-sizing: border-box;
 }
 
-.item1 { grid-area: header; }
-.item2 { grid-area: menu_bar; }
-.item3 { grid-area: pictures; }
-.item4 { grid-area: info; }
-.item5 { grid-area: footer; }
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu_bar;
+}
+
+.item3 {
+    grid-area: pictures;
+}
+
+.item4 {
+    grid-area: info;
+}
+
+.item5 {
+    grid-area: footer;
+}
 
 .grid-container {
     display: grid;
-    grid-template-areas:
-      'header header header header'
-      'menu_bar menu_bar menu_bar menu_bar'
-      'pictures pictures pictures pictures'
-      'info info info info'
-      'footer footer footer footer';
+    grid-template-areas: 'header header header header' 'menu_bar menu_bar menu_bar menu_bar' 'pictures pictures pictures pictures' 'info info info info' 'footer footer footer footer';
     grid-gap: 5px;
     background-color: black;
     padding: 5px;
     border-radius: 5px;
 }
 
-.grid-container > div, form {
+.grid-container>div, form {
     background-color: black;
     text-align: left;
-    color:white;
+    color: white;
     font-family: 'Gentium Book Basic', serif;
     padding: 10px;
     border-radius: 5px;
 }
 
-.grid-container > .item1 {
+.grid-container>.item1 {
     background-image: url("forest_silouhette.jpg");
-    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     text-align: center;
-    color:black;
+    color: black;
     font-family: 'Gentium Book Basic', serif;
     padding-top: 40px;
     padding-bottom: 250px;
@@ -73,6 +85,7 @@ body {
 }
 
 /*reference: https://www.the-art-of-web.com/css/fading-slideshow-no-jquery/ */
+
 .item3 {
     margin: auto;
     width: 100%;
@@ -82,6 +95,7 @@ body {
 .item3 a {
     position: absolute;
 }
+
 .item3 a img {
     border: 1px solid black;
     background: black;
@@ -93,14 +107,20 @@ body {
     animation-duration: 1s;
     z-index: 20;
 }
+
 .item3 a:nth-of-type(2) {
     z-index: 10;
 }
+
 .item3 a:nth-of-type(n+3) {
     display: none;
 }
 
 @keyframes fader {
-    from { opacity: 1.0; }
-    to   { opacity: 0.0; }
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
 }
