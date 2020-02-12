@@ -31,11 +31,11 @@
     border-radius: 5px;
 }
 
-.grid-container > .item1 {
+.grid-container > h1 {
     background-image: url("forest_silouhette.jpg");
     background-size: 100%;
     display: flex;
-    text-align: right;
+    text-align: center;
     color:black;
     font-family: 'Gentium Book Basic', serif;
     padding-top: 40px;
@@ -77,12 +77,10 @@ body {
     margin: auto;
     width: 100%;
     height: auto;
-    border-radius: 5px;
 }
 
 .item3 a {
     position: absolute;
-    border-radius: 5px;
 }
 .item3 a img {
     border: 1px solid black;
