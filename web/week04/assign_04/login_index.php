@@ -10,27 +10,25 @@
 </head>
 
 <body>
-    <div class="grid-container">
-        <form action="login_insert.php" method="POST">
-            <div class="item1">
-                <h1>Explore U.S. National Parks</h1>
-            </div>
-            <div class="item2">
-                <ul>
-                    <li><a href="home_page.php">Home Page</a></li>
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="sign_up.php">Sign Up</a></li>
-                    <li><a href="">About Us</a></li>
-                </ul>
-            </div>
-            <div class="item3">
-                <p>What words describe the outdoor vacation you seek?</p>
-                <input type="text" class="keywords" placeholder="Keywords" name="first">
-                <button class="submit_button" type="submit">Show Me My Vacation Destination!</button>
-            </div>
-            <div class="item4"></div>
-        </form>
-    </div>
+    <form action="login_insert.php" method="POST" class="grid-container">
+        <div class="item1">
+            <h1>Explore U.S. National Parks</h1>
+        </div>
+        <div class="item2">
+            <ul>
+                <li><a href="home_page.php">Home Page</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="sign_up.php">Sign Up</a></li>
+                <li><a href="">About Us</a></li>
+            </ul>
+        </div>
+        <div class="item3">
+            <p>What words describe the outdoor vacation you seek?</p>
+            <input type="text" class="keywords" placeholder="Keywords" name="first">
+            <button class="submit_button" type="submit">Show Me My Vacation Destination!</button>
+        </div>
+        <div class="item4"></div>
+    </form>
 </body>
 
 </html>

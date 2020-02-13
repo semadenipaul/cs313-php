@@ -4,6 +4,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,9 @@ session_start();
     <link rel="stylesheet" href="sign_up_style_sheet.css">
     <title>| Sign Up</title>
 </head>
+
 <body>
-<form action="" method="POST" class="grid-container">
+    <form action="" method="POST" class="grid-container">
         <div class="item1">
             <p style="text-align: left; font-size: 20px;">Explore U.S. National Parks</p>
             <h1>Sign Up</h1>
@@ -26,13 +28,13 @@ session_start();
             </ul>
         </div>
         <div class="item3">
-            <p>Username: <input type="text" name="username"/></p>
-            <p>Re-Enter Username: <input type="text" name="username2"/></p>
-            <p>Password: <input type="text" name="password"/></p>
-            <p>Re-Enter Password: <input type="text" name="password2"/></p>
-            <p>Email: <input type="text" name="email"/></p>
-            <p>City: <input type="text" name="city"/></p>
-            <p>State: <input type="text" name="state"/></p>
+            <p>Username: <input type="text" name="username" /></p>
+            <p>Re-Enter Username: <input type="text" name="username2" /></p>
+            <p>Password: <input type="text" name="password" /></p>
+            <p>Re-Enter Password: <input type="text" name="password2" /></p>
+            <p>Email: <input type="text" name="email" /></p>
+            <p>City: <input type="text" name="city" /></p>
+            <p>State: <input type="text" name="state" /></p>
             <button type="submit" value="submit">Create Account</button>
         </div>
         <div class="item4"></div>
@@ -54,4 +56,5 @@ session_start();
     }
     ?>
 </body>
+
 </html>
