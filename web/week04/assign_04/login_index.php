@@ -24,7 +24,7 @@
         </div>
         <div class="item3">
             <p>What words describe the outdoor vacation you seek?</p>
-            <input type="text" class="keywords" placeholder="Keywords" name="first">
+            <input type="text" class="keywords" placeholder="Keywords" name="keywords"><br>
             <button class="submit_button" type="submit">Show Me My Vacation Destination!</button>
         </div>
         <div class="item4"></div>
