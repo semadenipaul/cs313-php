@@ -10,7 +10,7 @@ $db = get_db();
       $scriptureId = $_GET['scriptureId'];
 
       // execute query to pull up data from that id
-      $statement = $db->prepare('SELECT * FROM Scriptures WHERE Id = :scriptureId');
+      $statement = $db->prepare('SELECT * FROM scripture_topic WHERE Id = :scriptureId');
       $statement->bindValue(':scriptureId', $scriptureId);
       $statement->execute();
 
