@@ -1,9 +1,17 @@
-<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="index_style_sheet.css">
 <?php
 require("dbConnect.php");
 $db = get_db();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index_style_sheet.css">
+    <title>| Sign Up</title>
+</head>
 
 <body>
     <div class="grid-container" style="margin-top:50px;">
@@ -28,3 +36,5 @@ $db = get_db();
         </form>
     </div>
 </body>
+
+</html>
