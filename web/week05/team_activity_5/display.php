@@ -15,7 +15,7 @@ $db = get_db();
             FROM Scriptures p 
             INNER JOIN scripture_topic st  ON st.scripture_id = p.id 
             INNER JOIN topic t ON st.topic_id = t.id
-            WHERE id = :scriptureId');
+            WHERE st.id = :scriptureId');
 
       $statement->bindValue(':scriptureId', $scriptureId);
       $statement->execute();
