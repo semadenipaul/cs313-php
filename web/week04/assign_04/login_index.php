@@ -6,16 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index_style_sheet.css">
-    <title>| Sign Up</title>
+    <title>| Welcome</title>
 </head>
 
-<?php
-require("dbConnect.php");
-$db = get_db();
-?>
-
 <body>
-    <div class="grid-container" style="margin-top:50px;">
+    <div class="grid-container">
         <form action="login_insert.php" method="POST">
             <div class="item1">
                 <h1>Explore U.S. National Parks</h1>
