@@ -20,12 +20,12 @@ $db = get_db();
          $chapter = $row['chapter'];
          $verse = $row['verse'];
          $content = $row['content'];
-         $topic_id = $row['topic[]'];
+         $topic_id = $row['topic'];
 
          $topic = $db->prepare("SELECT * FROM scripture_topic WHERE Id = $topic_id");
                $topic->execute();
                while ($frow = $topic->fetch(PDO::FETCH_ASSOC)){
-                  $topic = $frow['topic[]'];
+                  $topic = $frow['topic'];
                }
          echo "<h1>$book $chapter :$verse</h1>
          <br> <p>$content</p> <br> <p>Topics: $topic</p>";
