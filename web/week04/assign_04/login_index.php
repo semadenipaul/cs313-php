@@ -1,7 +1,3 @@
-<?php
-require("dbConnect.php");
-$db = get_db();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +8,11 @@ $db = get_db();
     <link rel="stylesheet" href="index_style_sheet.css">
     <title>| Sign Up</title>
 </head>
+
+<?php
+require("dbConnect.php");
+$db = get_db();
+?>
 
 <body>
     <div class="grid-container" style="margin-top:50px;">
