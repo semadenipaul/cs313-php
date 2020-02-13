@@ -22,7 +22,7 @@ $db = get_db();
          $content = $row['content'];
          $topic_id = $row['topic'];
 
-         $topic = $db->prepare("SELECT * FROM scripture_topic WHERE Id = $topic_id");
+         $topic = $db->prepare("SELECT * FROM topic WHERE Id = $topic_id");
                $topic->execute();
                while ($frow = $topic->fetch(PDO::FETCH_ASSOC)){
                   $topic = $frow['topic'];
