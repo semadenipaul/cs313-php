@@ -13,8 +13,8 @@ $db = get_db();
       $statement = $db->prepare(
           'SELECT p.book AS book, p.chapter AS chapter, p.verse AS verse, p.content AS content, t.topic AS topic
             FROM Scriptures p 
-            INNER JOIN scripture_topic st  ON st.scripture_id = p.id 
-            INNER JOIN topic t ON st.topic_id = t.id
+            INNER JOIN scripture_topic st  ON st.id = p.id 
+            INNER JOIN topic t ON st.id = t.id
             WHERE st.id = :scriptureId');
 
       $statement->bindValue(':scriptureId', $scriptureId);
