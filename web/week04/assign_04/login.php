@@ -12,7 +12,7 @@ session_start();
     <title>| Login</title>
 </head>
 <body>
-<form action="" method="POST" class="grid-container">
+<form action="login_index.php" method="POST" class="grid-container">
         <div class="item1">
             <p style="text-align: left; font-size: 20px;">Explore U.S. National Parks</p>
             <h1>Login</h1>
@@ -35,8 +35,10 @@ session_start();
         <div class="item4"></div>
         <div class="item5"></div>
     </form>
+</body>
+</html>
 
-    <?php
+<?php
     require "db_connect.php";
     $db = get_db();
 
@@ -52,6 +54,4 @@ session_start();
 
         echo "<div style=\"color: white;\" class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
     }
-    ?>
-</body>
-</html>
+?>
