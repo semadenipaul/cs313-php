@@ -1,5 +1,5 @@
-<?php 
-session_start(); 
+<?php
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,8 +34,14 @@ session_start();
     </form>
     <?php
     if (isset($_POST["username"])) {
-        echo "<div style=\"color: white;\">Session variables are Username:" . $_POST["username"] . "<br> Password: " . $_POST["password"] . "</div>";
-    }
+        $_POST["username"] = $username;
+        $username = $_SESSION["username"];
+
+        $_POST["password"] = $password;
+        $password = $_SESSION["password"];
+
+        echo "Session variables are " . $_SESSION["username"] . " and " . $_SESSION["password"];
+    } 
     else {
         echo "<div style=\"color: white;\">Sessionn variables are not set!!!!</div>";
     }
