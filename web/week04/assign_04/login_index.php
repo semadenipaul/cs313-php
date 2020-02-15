@@ -1,8 +1,5 @@
 <?php
 session_start();
-
-$_SESSION['person'] = $person;
-$_SESSION['person_password'] = $password;
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +35,7 @@ $_SESSION['person_password'] = $password;
     </form>
     <?php
     if (isset($_SESSION['person'])) {
-        echo "<div style=\"color: white;\">Session variables are " . $person . " and " . $password . "</div>";
+        echo "<div style=\"color: white;\">Session variables are " . $_SESSION['person'] . " and " . $_SESSION['person_password'] . "</div>";
     } else {
         echo "<div style=\"color: white;\">Sessionn variables are not set!!!!</div>";
     }
