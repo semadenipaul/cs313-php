@@ -5,12 +5,8 @@ if (isset($_POST['Submit'])) {
     $_SESSION['username'] = $_POST['username'];
     $_SESSION['password'] = $_POST['password'];
 }
-
-
-require("dbConnect.php");
-$db = get_db();
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +36,10 @@ $db = get_db();
         <div class="item3">
             <p>What words describe the outdoor vacation you seek?</p>
             <p>Which state would you like to visit?
+                <?php
+                require("dbConnect.php");
+                $db = get_db();
+                ?>
                 <select id="state" class="states" name="state">
                     <?php
                     $statement = $db->prepare("SELECT * FROM national_parks");
@@ -144,4 +144,5 @@ while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
                     <option value="Wyoming">Wyoming</option>
                 </select>
                 ?>/*
+
 
