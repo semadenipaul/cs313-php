@@ -38,8 +38,8 @@ session_start();
         <div class="item5"></div>
     </form>
     <?php
-    $username = $_SESSION['username'];
-    $password = $_SESSION['password'];
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
     ?>
 </body>
 
