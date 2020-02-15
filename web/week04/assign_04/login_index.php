@@ -33,19 +33,11 @@ if(isset($_POST['Submit'])) {
         </div>
         <div class="item3">
             <p>What words describe the outdoor vacation you seek?</p>
-            <input type="text" class="keywords" placeholder="Keywords" name="keywords"><br>
+            <input type="text" class="keywords" placeholder="Keywords" name="keywords"><br><br>
             <button class="submit_button" type="submit">Show Me My Vacation Destination!</button>
         </div>
         <div class="item4"></div>
     </form>
-    <?php
-    if (isset($_SESSION['username'])) {
-        echo "<div style=\"color: white;\">Session variables are " . $_SESSION['username'] . " and " . $_SESSION['password'] . "</div>";
-    } else {
-        echo "<div style=\"color: white;\">Sessionn variables are not set!!!!</div>";
-    }
-
-    ?>
 </body>
 
 </html>
