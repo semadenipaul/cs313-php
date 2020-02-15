@@ -38,9 +38,9 @@ session_start();
         <div class="item5"></div>
     </form>
     <?php
-    if(isset($_POST["submit"])) {
-        $_SESSION['person'] = $_POST["username"];
-        $_SESSION['person_password'] = $_POST["password"];
+    if(isset($_POST['submit'])) {
+        $_SESSION['person'] = $_POST['username'];
+        $_SESSION['person_password'] = $_POST['password'];
     }
     
     ?>
