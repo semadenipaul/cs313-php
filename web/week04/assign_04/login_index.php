@@ -40,7 +40,7 @@ session_start();
         $_POST["password"] = $password;
         $password = $_SESSION["password"];
 
-        echo "Session variables are " . $_SESSION["username"] . " and " . $_SESSION["password"];
+        echo "<div style=\"color: white;\">Session variables are " . $_SESSION["username"] . " and " . $_SESSION["password"] . "</div>";
     } 
     else {
         echo "<div style=\"color: white;\">Sessionn variables are not set!!!!</div>";
