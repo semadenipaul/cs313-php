@@ -4,6 +4,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,9 @@ session_start();
     <link rel="stylesheet" href="login_style_sheet.css">
     <title>| Login</title>
 </head>
+
 <body>
-<form action="login_index.php" method="POST" class="grid-container">
+    <form action="login_index.php" method="POST" class="grid-container">
         <div class="item1">
             <p style="text-align: left; font-size: 20px;">Explore U.S. National Parks</p>
             <h1>Login</h1>
@@ -26,8 +28,8 @@ session_start();
             </ul>
         </div>
         <div class="item3">
-            <p>Username: <input type="text" name="username"/></p>
-            <p>Password: <input type="text" name="password"/></p>
+            <p>Username: <input type="text" name="username" /></p>
+            <p>Password: <input type="text" name="password" /></p>
             <button type="submit" value="submit">Sign In</button><br>
             <a href="">Forgot Password</a>
             <a href="">Forgot Username</a>
@@ -35,23 +37,11 @@ session_start();
         <div class="item4"></div>
         <div class="item5"></div>
     </form>
+    <?php
+    $username = $_SESSION['username'];
+    $password = $_SESSION['password'];
+    echo "Session variables are Username: $username <br> Password: $password";
+    ?>
 </body>
+
 </html>
-
-<?php
-    require "db_connect.php";
-    $db = get_db();
-
-    $person = $db->prepare("SELECT * FROM person");
-    $person->execute();
-
-    while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
-        $user_name = $row['USER_NAME'];
-        $password = $row['password'];
-        $email = $row['person_email'];
-        $new_person = $row['new_person'];
-        $location = $row['person_location'];
-
-        echo "<div style=\"color: white;\" class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
-    }
-?>
