@@ -13,7 +13,7 @@ session_start();
 </head>
 
 <body>
-    <form action="login_insert.php" method="POST" class="grid-container">
+    <form action="login_insert.php" method="GET" class="grid-container">
         <div class="item1">
             <h1>Explore U.S. National Parks</h1>
         </div>
@@ -33,8 +33,8 @@ session_start();
         <div class="item4"></div>
     </form>
     <?php
-    if (isset($_SESSION["username"])) {
-        echo "<div style=\"color: white;\">Session variables are Username:" . $_SESSION["username"] . "<br> Password: " . $_SESSION["password"] . "</div>";
+    if (isset($_POST["username"])) {
+        echo "<div style=\"color: white;\">Session variables are Username:" . $_POST["username"] . "<br> Password: " . $_POST["password"] . "</div>";
     }
     else {
         echo "<div style=\"color: white;\">Sessionn variables are not set!!!!</div>";
