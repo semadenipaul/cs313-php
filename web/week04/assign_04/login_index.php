@@ -30,25 +30,33 @@
         </div>
         <div class="item4"></div>
     </form>
-    <?php echo "<div style=\"color: white;\">Session variables are Username:" . $_SESSION["username"] . "<br> Password: " . $_SESSION["password"]. "</div>"; ?>
+    <?php
+    if (isset($_SESSION["username"])) {
+        echo "<div style=\"color: white;\">Session variables are Username:" . $_SESSION["username"] . "<br> Password: " . $_SESSION["password"] . "</div>";
+    }
+    else {
+        echo "<div style=\"color: white;\">Sessionn variables are not set!!!!</div>";
+    }
+
+    ?>
 </body>
 
 </html>
 
 <?php
-    require "db_connect.php";
-    $db = get_db();
+require "db_connect.php";
+$db = get_db();
 
-    $person = $db->prepare("SELECT * FROM person");
-    $person->execute();
+$person = $db->prepare("SELECT * FROM person");
+$person->execute();
 
-    while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
-        $user_name = $row['USER_NAME'];
-        $password = $row['password'];
-        $email = $row['person_email'];
-        $new_person = $row['new_person'];
-        $location = $row['person_location'];
+while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
+    $user_name = $row['USER_NAME'];
+    $password = $row['password'];
+    $email = $row['person_email'];
+    $new_person = $row['new_person'];
+    $location = $row['person_location'];
 
-        echo "<div style=\"color: white;\" class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
-    }
+    echo "<div style=\"color: white;\" class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
+}
 ?>
