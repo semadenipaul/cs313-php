@@ -40,7 +40,6 @@ session_start();
     <?php
     $username = $_SESSION['username'];
     $password = $_SESSION['password'];
-    echo "alert(Session variables are Username: $username <br> Password: $password)";
     ?>
 </body>
 

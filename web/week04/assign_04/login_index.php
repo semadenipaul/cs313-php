@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +30,7 @@
         </div>
         <div class="item4"></div>
     </form>
+    <?php echo "Session variables are Username:" . $_SESSION["username"] . "<br> Password: " . $_SESSION["password"]; ?>
 </body>
 
 </html>
