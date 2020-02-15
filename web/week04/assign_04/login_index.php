@@ -30,7 +30,7 @@
         </div>
         <div class="item4"></div>
     </form>
-    <?php echo "Session variables are Username:" . $_SESSION["username"] . "<br> Password: " . $_SESSION["password"]; ?>
+    <?php echo "<div style=\"color: white;\">Session variables are Username:" . $_SESSION["username"] . "<br> Password: " . $_SESSION["password"]. "</div>"; ?>
 </body>
 
 </html>
