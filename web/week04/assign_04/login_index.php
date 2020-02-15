@@ -5,6 +5,11 @@ if (isset($_POST['Submit'])) {
     $_SESSION['username'] = $_POST['username'];
     $_SESSION['password'] = $_POST['password'];
 }
+
+
+require("dbConnect.php");
+$db = get_db();
+
 ?>
 
 <!DOCTYPE html>
@@ -26,15 +31,67 @@ if (isset($_POST['Submit'])) {
         <div class="item2">
             <ul>
                 <li><a href="home_page.php">Home Page</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="sign_up.php">Sign Up</a></li>
+                <li><a href="">Previous Trips</a></li>
+                <li><a href="">Shop</a></li>
                 <li><a href="">About Us</a></li>
+                <li><a href="">Logout</a></li>
             </ul>
         </div>
         <div class="item3">
             <p>What words describe the outdoor vacation you seek?</p>
             <p>Which state would you like to visit?
-                <select id="states">
+                <select id="state" class="states" name="state">
+                    <?php
+                    $statement = $db->prepare("SELECT * FROM national_parks");
+                    $statement->execute();
+
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['national_parks_id'];
+                        $state = $row['US_state'];
+                        echo "<option value='$id'>$state</option>";
+                    }
+                    ?>
+                </select>
+            </p>
+            <p>What weather conditions do you prefer?
+                <input type="radio" id="sunny" name="weatherConditions" value="sunny" /><label for="sunny">Sunny</label>
+                <input type="radio" id="snowy" name="weatherConditions" value="snowy" /><label for="snowy">Snowy</label>
+            </p>
+            <p>Where do you want to spend most of your time?
+                <input type="checkbox" id="sunny" name="nature[]" value="sunny" /><label for="sunny">Forest</label>
+                <input type="checkbox" id="snowy" name="nature[]" value="snowy" /><label for="snowy">Beach</label>
+                <input type="checkbox" id="snowy" name="nature[]" value="snowy" /><label for="snowy">Mountains</label>
+                <input type="checkbox" id="snowy" name="nature[]" value="snowy" /><label for="snowy">Water</label>
+                <input type="checkbox" id="snowy" name="nature[]" value="snowy" /><label for="snowy">Desert</label>
+            </p>
+            <br><br>
+            <button class="submit_button" type="submit">Show Me My Vacation Destination!</button>
+        </div>
+        <div class="item4"></div>
+    </form>
+</body>
+
+</html>
+
+<?php
+require "db_connect.php";
+$db = get_db();
+
+$person = $db->prepare("SELECT * FROM person");
+$person->execute();
+
+while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
+    $user_name = $row['USER_NAME'];
+    $password = $row['password'];
+    $email = $row['person_email'];
+    $new_person = $row['new_person'];
+    $location = $row['person_location'];
+
+    echo "<div style=\"color: white;\" class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
+}
+?>
+<?php
+/*<select id="states">
                     <option value="Alabama">Alabama</option>
                     <option value="Alaska">Alaska</option>
                     <option value="Arizona">Arizona</option>
@@ -86,35 +143,5 @@ if (isset($_POST['Submit'])) {
                     <option value="Wisconsin">Wisconsin</option>
                     <option value="Wyoming">Wyoming</option>
                 </select>
-            </p>
-            <p>Re-Enter Username: <input type="text" name="username2" /></p>
-            <p>Password: <input type="text" name="password" /></p>
-            <p>Re-Enter Password: <input type="text" name="password2" /></p>
-            <p>Email: <input type="text" name="email" /></p>
-            <p>City: <input type="text" name="city" /></p>
-            <p>State: <input type="text" name="state" /></p><br><br>
-            <button class="submit_button" type="submit">Show Me My Vacation Destination!</button>
-        </div>
-        <div class="item4"></div>
-    </form>
-</body>
+                ?>/*
 
-</html>
-
-<?php
-require "db_connect.php";
-$db = get_db();
-
-$person = $db->prepare("SELECT * FROM person");
-$person->execute();
-
-while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
-    $user_name = $row['USER_NAME'];
-    $password = $row['password'];
-    $email = $row['person_email'];
-    $new_person = $row['new_person'];
-    $location = $row['person_location'];
-
-    echo "<div style=\"color: white;\" class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
-}
-?>

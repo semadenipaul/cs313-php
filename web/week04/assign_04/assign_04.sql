@@ -2,9 +2,9 @@
 DROP TABLE keywords;
 DROP TABLE national_parks;
 DROP TABLE previous_parks_visited;
-DROP TABLE person_reviews;*/
+DROP TABLE person_reviews;
 
-/*CREATE TABLE person
+CREATE TABLE person
 (
     id SERIAL NOT NULL,
     USER_NAME VARCHAR(80) NOT NULL UNIQUE,
@@ -15,22 +15,18 @@ DROP TABLE person_reviews;*/
     PRIMARY KEY (id)
 );
 
-CREATE TABLE keywords
-(
-    key_words_id SERIAL NOT NULL,
-    person INT NOT NULL REFERENCES person(id),
-    keywords TEXT,
-    PRIMARY KEY (key_words_id)
-);
-
 CREATE TABLE national_parks
 (
     national_parks_id SERIAL NOT NULL,
-    national_park TEXT,
-    key_words INT REFERENCES keywords(key_words_id),
-    --person INT NOT NULL REFERENCES person(id),
-    keywords_to_describe_national_parks TEXT,
-    --previous_parks_visited INT NOT NULL REFERENCES previous_parks_visited(previous_parks_id),
+    national_park VARCHAR(200),
+    image   VARCHAR(500) NOT NULL,
+    US_state VARCHAR(200) NOT NULL,
+    nature1 VARCHAR(200) NOT NULL,
+    nature2 VARCHAR(200) NOT NULL,
+    activities1 VARCHAR(200) NOT NULL,
+    activities2 VARCHAR(200) NOT NULL,
+    activities3 VARCHAR(200) NOT NULL,
+    vacation_time VARCHAR(100) NOT NULL,
     PRIMARY KEY (national_parks_id)
 );
 
@@ -48,7 +44,6 @@ CREATE TABLE person_reviews
     reviews_id SERIAL NOT NULL,
     previous_parks_visited INT NOT NULL REFERENCES previous_parks_visited(previous_parks_id),
     reviews_content TEXT,
-    --person INT NOT NULL REFERENCES person(id),
     PRIMARY KEY (reviews_id)
 );*/
 
@@ -63,27 +58,125 @@ VALUES ('semadenipaulo','brazilsdastuff44','soccor4life@gmail.com', False, 'Sao 
 INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)
 VALUES ('SatynaraynaNakkapalli','indiatechlife5','cricketisdabest@yahoo.com', True, 'Indranagar, Bengaluru, India');
 
-INSERT INTO keywords (person, keywords)
-VALUES (1, 'red, canyon, rocks, jeep, sunny, Utah');
-INSERT INTO keywords (person, keywords)
-VALUES (2, 'snow, mountains, ski, cold, white, Wyoming');
-INSERT INTO keywords (person, keywords)
-VALUES (3, 'humid, tropical, sunny, palm trees, Hawaii');
-INSERT INTO keywords (person, keywords)
-VALUES (4, 'geysers, animals, fishing, forest, mountains, Montana');
-INSERT INTO keywords (person, keywords)
-VALUES (5, 'waterfalls, rivers, bridges, swimming, New York');
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Grand Teton National Park', 
+        'teton.gif',
+        'Wyoming',
+        'Mountains',
+        'Forest',
+        'Hiking',
+        'Camping',
+        'Fishing',
+        '2 - 4 Days'
+        );
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Glacier National Park', 
+        'glacier.jpg', 
+        'Montana', 
+        'Lakes', 
+        'Forest', 
+        'Camping', 
+        'Photography', 
+        'Hiking', 
+        '4 - 7 days'
+        );
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Haleakalā National Park', 
+        'hawaii.jpg', 
+        'Hawaii', 
+        'Waterfalls', 
+        'Beach', 
+        'Hiking', 
+        'Swimming', 
+        'Snorkeling', 
+        '7 - 14 days');
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Arches National Park', 
+        'arches.jpg', 
+        'Utah', 
+        'Canyons', 
+        'Rivers', 
+        'ATV', 
+        'Camping', 
+        'Hiking', 
+        '7 - 9 days');
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Acadia National Park', 
+        'arcadia.jpg', 
+        'Maine', 
+        'Coastline', 
+        'Mountains', 
+        'Hiking', 
+        'Photography', 
+        'Camping', 
+        '2 - 4 days');
 
-INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
-VALUES ('Grand Teton National Park', 2, 'snow, Colorado, Utah, Wyoming, cold, ski, snowboard, sledding, ice fishing');
-INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
-VALUES ('Glacier National Park', 4, 'buffalo, deer, elk, Montana, Bamff, geysers. mountains, fishing, forest');
-INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
-VALUES ('Haleakalā National Park', 3, 'volcanoes, waterfalls, beach, palm trees, sunny, humid, tropical, pineapple, Hawaii, Florida, Georgia');
-INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
-VALUES ('Arches National Park', 1, 'arches, jeep, red, canyon, sunny, Utah, rattlesnakes');
-INSERT INTO national_parks (national_park, key_words, keywords_to_describe_national_parks)
-VALUES ('Niagra Falls National Park', 5, 'waterfalls, rivers, ferry, bridges, New York, Toronto, Canada');
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Canyonlands National Park', 
+        'canyonlands.jpg', 
+        'Utah', 
+        'Canyons', 
+        'Desert', 
+        'ATV', 
+        'Camping', 
+        'Hiking', 
+        '7 - 9 days');
+
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Denali National Park', 
+        'alaska.jpg', 
+        'Alaska', 
+        'Tundra', 
+        'Mountains', 
+        'Fishing', 
+        'Photography', 
+        'Wildlife', 
+        '8 - 15 days');
+
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Everglades National Park', 
+        'everglades.jpg', 
+        'Florida', 
+        'Swamps', 
+        'Lakes', 
+        'Fishing', 
+        'Boating', 
+        'Camping', 
+        '6 - 8 days');
+
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Great Smoky Mountain National Park', 
+        'smokymtn.jpg', 
+        'Tennessee', 
+        'Forest', 
+        'Mountains', 
+        'Hiking', 
+        'Photography', 
+        'Running', 
+        '2 - 3 days');
+
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Yellowstone National Park', 
+        'yellowstone.jpg', 
+        'Wyoming', 
+        'Geysers', 
+        'Mountains', 
+        'Wildlife', 
+        'Photography', 
+        'Camping', 
+        '7 - 9 days');
+
+INSERT INTO national_parks (national_park, image, US_state, nature1, nature2, activities1, activities2, activities3, vacation_time)
+VALUES ('Yosemite National Park', 
+        'yosemite.jpg', 
+        'California', 
+        'Forest', 
+        'Mountains', 
+        'Hiking', 
+        'Rock Climbing', 
+        'Camping', 
+        '5 - 8 days');
+
 
 INSERT INTO previous_parks_visited (person, national_parks)
 VALUES (2, 4);
@@ -91,6 +184,6 @@ INSERT INTO previous_parks_visited (person, national_parks)
 VALUES (4, 1);
 
 INSERT INTO person_reviews (previous_parks_visited, reviews_content)
-VALUES (2, 'I loved visiting Arches National Park! My kids loked playing in the red sand. I would recommend setting aside 4-5 weeks to see all of the amazing sights. 5/5 STARS');
+VALUES (2, 'I loved visiting Arches National Park! My kids loved playing in the red sand. I would recommend setting aside 4-5 weeks to see all of the amazing sights. 5/5 STARS');
 INSERT INTO person_reviews (previous_parks_visited, reviews_content)
 VALUES (1, 'Grand Teton National Park was spectacular! It was a little dangerous with all of the bears wandering around, but as long as you do not feed the bears, you will be safe. 4/5 STARS');
