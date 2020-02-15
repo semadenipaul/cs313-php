@@ -34,8 +34,8 @@ session_start();
         <div class="item4"></div>
     </form>
     <?php
-    if (isset($_SESSION['person'])) {
-        echo "<div style=\"color: white;\">Session variables are " . $_SESSION['person'] . " and " . $_SESSION['person_password'] . "</div>";
+    if (isset($_SESSION['username'])) {
+        echo "<div style=\"color: white;\">Session variables are " . $_SESSION['username'] . " and " . $_SESSION['password'] . "</div>";
     } else {
         echo "<div style=\"color: white;\">Sessionn variables are not set!!!!</div>";
     }

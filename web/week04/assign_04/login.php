@@ -30,7 +30,7 @@ session_start();
         <div class="item3">
             <p>Username: <input type="text" name="username" /></p>
             <p>Password: <input type="text" name="password" /></p>
-            <button type="submit" name="submit" value="submit">Sign In</button><br>
+            <button type="submit" name="Submit" value="Submit!">Sign In</button><br>
             <a href="">Forgot Password</a>
             <a href="">Forgot Username</a>
         </div>
@@ -38,9 +38,9 @@ session_start();
         <div class="item5"></div>
     </form>
     <?php
-    if(isset($_POST['submit'])) {
-        $_SESSION['person'] = $_POST['username'];
-        $_SESSION['person_password'] = $_POST['password'];
+    if(isset($_POST['Submit'])) {
+        $_SESSION['username'] = $_POST['username'];
+        $_SESSION['password'] = $_POST['password'];
     }
     
     ?>
