@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if(isset($_POST['Submit'])) {
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['password'] = $_POST['password'];
+}
 ?>
 
 <!DOCTYPE html>

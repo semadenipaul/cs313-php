@@ -37,13 +37,7 @@ session_start();
         <div class="item4"></div>
         <div class="item5"></div>
     </form>
-    <?php
-    if(isset($_POST['Submit'])) {
-        $_SESSION['username'] = $_POST['username'];
-        $_SESSION['password'] = $_POST['password'];
-    }
-    
-    ?>
+   
 </body>
 
 </html>
