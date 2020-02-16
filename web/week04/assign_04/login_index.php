@@ -47,7 +47,8 @@ if (isset($_POST['Submit'])) {
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $row['national_parks_id'];
                         $state = $row['US_state'];
-                        echo "<option value='$id'>$state</option>";
+                        echo $state;
+                        #echo "<option value='$id'>$state</option>";
                     }
                     ?>
                 </select>
