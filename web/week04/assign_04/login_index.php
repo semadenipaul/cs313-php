@@ -39,20 +39,20 @@ $db = get_db();
         <div class="item3">
             <p>What words describe the outdoor vacation you seek?</p>
             <p>Which state would you like to visit?
-                <!--<select id="states" name="state">-->
-                <?php
-                $statement = $db->prepare("SELECT US_state FROM national_parks");
-                $statement->execute();
+                <select id="states" name="state">
+                    <?php
+                    $statement = $db->prepare("SELECT * FROM national_parks");
+                    $statement->execute();
 
-                while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    #$id = $row['national_parks_id'];
-                    $state = $row['US_state'];
-                    #echo "Id: " . $id;
-                    echo "State: " . $state;
-                    #echo "<option value='$id'>$state</option>";
-                }
-                ?>
-                <!--</select>-->
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['national_parks_id'];
+                        $state = $row['US_state'];
+                        echo "Id: " . $id;
+                        echo "State: " . $state;
+                        echo "<option value='$id'>$state</option>";
+                    }
+                    ?>
+                </select>
             </p>
             <p>What weather conditions do you prefer?
                 <input type="radio" id="sunny" name="weatherConditions" value="sunny" /><label for="sunny">Sunny</label>
@@ -145,6 +145,7 @@ while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
                     <option value="Wyoming">Wyoming</option>
                 </select>
                 ?>/*
+
 
 
 
