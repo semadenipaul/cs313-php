@@ -6,18 +6,17 @@ DROP TABLE person_reviews;
 
 CREATE TABLE person
 (
-    id SERIAL NOT NULL,
+    id SERIAL NOT NULL PRIMARY KEY,
     USER_NAME VARCHAR(80) NOT NULL UNIQUE,
     password VARCHAR(100) NOT NULL,
     person_email VARCHAR(100),
     new_person BOOLEAN,
-    person_location VARCHAR(256),
-    PRIMARY KEY (id)
+    person_location VARCHAR(256)
 );
 
 CREATE TABLE national_parks
 (
-    national_parks_id SERIAL NOT NULL,
+    id SERIAL NOT NULL PRIMARY KEY,
     national_park VARCHAR(200),
     image   VARCHAR(500) NOT NULL,
     US_state VARCHAR(200) NOT NULL,
@@ -26,25 +25,22 @@ CREATE TABLE national_parks
     activities1 VARCHAR(200) NOT NULL,
     activities2 VARCHAR(200) NOT NULL,
     activities3 VARCHAR(200) NOT NULL,
-    vacation_time VARCHAR(100) NOT NULL,
-    PRIMARY KEY (national_parks_id)
+    vacation_time VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE previous_parks_visited
 (
-    previous_parks_id SERIAL NOT NULL,
+    id SERIAL NOT NULL PRIMARY KEY,
     person INT NOT NULL REFERENCES person(id),
-    national_parks INT NOT NULL REFERENCES national_parks(national_parks_id),
-    UNIQUE (person, national_parks),
-    PRIMARY KEY (previous_parks_id)
+    national_parks INT NOT NULL REFERENCES national_parks(id),
+    UNIQUE (person, national_parks)
 );
 
 CREATE TABLE person_reviews
 (
-    reviews_id SERIAL NOT NULL,
-    previous_parks_visited INT NOT NULL REFERENCES previous_parks_visited(previous_parks_id),
-    reviews_content TEXT,
-    PRIMARY KEY (reviews_id)
+    id SERIAL NOT NULL PRIMARY KEY,
+    previous_parks_visited INT NOT NULL REFERENCES previous_parks_visited(id),
+    reviews_content TEXT
 );*/
 
 INSERT INTO person (USER_NAME, password, person_email, new_person, person_location)

@@ -45,7 +45,7 @@ $db = get_db();
                     $statement->execute();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['national_parks_id'];
+                        $id = $row['id'];
                         $state = $row['US_state'];
                         echo "Id: " . $id;
                         echo "State: " . $state;
