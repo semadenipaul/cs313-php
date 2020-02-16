@@ -41,13 +41,13 @@ if (isset($_POST['Submit'])) {
                     require("db_connect.php");
                     $db = get_db();
 
-                    $statement = $db->prepare("SELECT * FROM national_parks");
+                    $statement = $db->prepare("SELECT US_state FROM national_parks");
                     $statement->execute();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['national_parks_id'];
+                        #$id = $row['national_parks_id'];
                         $state = $row['US_state'];
-                        echo "Id: " . $id;
+                        #echo "Id: " . $id;
                         echo "State: " . $state;
                         #echo "<option value='$id'>$state</option>";
                     }
