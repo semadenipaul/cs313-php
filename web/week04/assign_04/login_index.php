@@ -45,8 +45,8 @@ $db = get_db();
                     $statement->execute();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
-                        $state = $row['US_state'];
+                        $id = $row[0];
+                        $state = $row[3];
                         echo "Id: " . $id;
                         echo "State: " . $state;
                         echo "<option value='$id'>$state</option>";
