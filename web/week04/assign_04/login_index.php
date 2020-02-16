@@ -36,17 +36,18 @@ if (isset($_POST['Submit'])) {
         <div class="item3">
             <p>What words describe the outdoor vacation you seek?</p>
             <p>Which state would you like to visit?
-                <select id="state" class="states" name="state">
+                <select id="states" name="state">
                     <?php
                     require("db_connect.php");
                     $db = get_db();
 
-                    $statement = $db->prepare("SELECT US_state FROM national_parks");
+                    $statement = $db->prepare("SELECT * FROM national_parks");
                     $statement->execute();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['national_parks_id'];
                         $state = $row['US_state'];
-                        echo "<option value='$state'>$state</option>";
+                        echo "<option value='$id'>$state</option>";
                     }
                     ?>
                 </select>
@@ -142,6 +143,7 @@ while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
                     <option value="Wyoming">Wyoming</option>
                 </select>
                 ?>/*
+
 
 
 
