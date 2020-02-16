@@ -5,6 +5,9 @@ if (isset($_POST['Submit'])) {
     $_SESSION['username'] = $_POST['username'];
     $_SESSION['password'] = $_POST['password'];
 }
+
+require("db_connect.php");
+$db = get_db();
 ?>
 
 
@@ -36,22 +39,19 @@ if (isset($_POST['Submit'])) {
         <div class="item3">
             <p>What words describe the outdoor vacation you seek?</p>
             <p>Which state would you like to visit?
-        <!--<select id="states" name="state">-->
-                    <?php
-                    require("db_connect.php");
-                    $db = get_db();
+                <!--<select id="states" name="state">-->
+                <?php
+                $statement = $db->prepare("SELECT US_state FROM national_parks");
+                $statement->execute();
 
-                    $statement = $db->prepare("SELECT US_state FROM national_parks");
-                    $statement->execute();
-
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        #$id = $row['national_parks_id'];
-                        $state = $row["US_state"];
-                        #echo "Id: " . $id;
-                        echo "State: " . "$state";
-                        #echo "<option value='$id'>$state</option>";
-                    }
-                    ?>
+                while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                    #$id = $row['national_parks_id'];
+                    $state = $row['US_state'];
+                    #echo "Id: " . $id;
+                    echo "State: " . $state;
+                    #echo "<option value='$id'>$state</option>";
+                }
+                ?>
                 <!--</select>-->
             </p>
             <p>What weather conditions do you prefer?
@@ -145,6 +145,7 @@ while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
                     <option value="Wyoming">Wyoming</option>
                 </select>
                 ?>/*
+
 
 
 
