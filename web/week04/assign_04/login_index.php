@@ -36,7 +36,7 @@ if (isset($_POST['Submit'])) {
         <div class="item3">
             <p>What words describe the outdoor vacation you seek?</p>
             <p>Which state would you like to visit?
-                <select id="states" name="state">
+        <!--<select id="states" name="state">-->
                     <?php
                     require("db_connect.php");
                     $db = get_db();
@@ -47,11 +47,12 @@ if (isset($_POST['Submit'])) {
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $row['national_parks_id'];
                         $state = $row['US_state'];
-                        echo $state;
+                        echo "Id: " . $id;
+                        echo "State: " . $state;
                         #echo "<option value='$id'>$state</option>";
                     }
                     ?>
-                </select>
+                <!--</select>-->
             </p>
             <p>What weather conditions do you prefer?
                 <input type="radio" id="sunny" name="weatherConditions" value="sunny" /><label for="sunny">Sunny</label>
