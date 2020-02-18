@@ -54,13 +54,15 @@ $db = get_db();
             </p>
             <p> Where do you want to spend most of your time? (select 2)
             <?php
-                    $statement = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks ORDER BY nature1, nature2");
+                    $statement = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks");
                     $statement->execute();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $row['id'];
-                        $nature = $row['nature1, nature2'];
-                        echo "<input type='checkbox' value='$id'>$nature</option>";
+                        $nature1 = $row['nature1'];
+                        $nature2 = $row['nature2'];
+                        echo "<input type='checkbox' id='$id' name='nature[]' value='$id'><label for='$id'>$nature1</label><br>";
+                        echo "<input type='checkbox' id='$id' name='nature[]' value='$id'><label for='$id'>$nature2</label><br>";
                     }
                     ?>
             </p>
