@@ -46,17 +46,23 @@ $db = get_db();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $row['id'];
-                        #echo "id = " . $id;
                         $state = $row['us_state'];
-                        #echo "state = " . $state;
                         echo "<option value='$id'>$state</option>";
                     }
                     ?>
                 </select>
             </p>
-            <p>What weather conditions do you prefer?
-                <input type="radio" id="sunny" name="weatherConditions" value="sunny" /><label for="sunny">Sunny</label>
-                <input type="radio" id="snowy" name="weatherConditions" value="snowy" /><label for="snowy">Snowy</label>
+            <p> Where do you want to spend most of your time? (select 2)
+            <?php
+                    $statement = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks ORDER BY nature1, nature2");
+                    $statement->execute();
+
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['id'];
+                        $nature = $row['nature1, nature2'];
+                        echo "<input type='checkbox' value='$id'>$nature</option>";
+                    }
+                    ?>
             </p>
             <p>Where do you want to spend most of your time?
                 <input type="checkbox" id="sunny" name="nature[]" value="sunny" /><label for="sunny">Forest</label>
