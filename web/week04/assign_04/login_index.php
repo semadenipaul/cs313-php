@@ -61,8 +61,8 @@ $db = get_db();
                         $id = $row['id'];
                         $nature1 = $row['nature1'];
                         $nature2 = $row['nature2'];
-                        echo "<input type='checkbox' id='$id' name='nature[]' value='$id'><label for='$id'>$nature1</label><br>";
-                        echo "<input type='checkbox' id='$id' name='nature[]' value='$id'><label for='$id'>$nature2</label><br>";
+                        echo "<option value='$id'>$nature1</option>";
+                        echo "<option value='$id'>$nature2</option>";
                     }
                     ?>
             </p>
