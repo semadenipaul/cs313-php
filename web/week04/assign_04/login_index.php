@@ -53,19 +53,22 @@ $db = get_db();
                 </select>
             </p>
             <p> Where do you want to spend most of your time? (select 2)
-            <?php
-                    $values = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks");
+                <select id="nature" name="nature">
+                    <?php
+                    $values = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks ORDER BY nature1");
                     $values->execute();
 
                     while ($nrow = $values->fetch(PDO::FETCH_ASSOC)) {
                         $id = $nrow['id'];
                         $nature1 = $nrow['nature1'];
-                        $nature2 = $nrow['nature2'];
+                        $nature1 = $nrow['nature2'];
                         echo "<option value='$id'>$nature1</option>";
                         echo "<option value='$id'>$nature2</option>";
                     }
                     ?>
+                </select>
             </p>
+
             <p>Where do you want to spend most of your time?
                 <input type="checkbox" id="sunny" name="nature[]" value="sunny" /><label for="sunny">Forest</label>
                 <input type="checkbox" id="snowy" name="nature[]" value="snowy" /><label for="snowy">Beach</label>
@@ -153,6 +156,8 @@ while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
                     <option value="Wyoming">Wyoming</option>
                 </select>
                 ?>/*
+
+
 
 
 
