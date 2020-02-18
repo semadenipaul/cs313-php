@@ -79,7 +79,7 @@ $db = get_db();
                 </select>
             </p>
 
-            <p>What activities are interesting to you? (SELECT 3)
+            <p>Which of these activities interest you? (SELECT 3)
                 <select id="activity1" name="activity1">
                     <?php
                     $statement = $db->prepare("SELECT DISTINCT activity1 FROM national_parks ORDER BY activity1");
