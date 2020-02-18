@@ -72,7 +72,7 @@ $db = get_db();
 
                     while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $nrow['id'];
-                        $nature1 = $nrow['nature2'];
+                        $nature2 = $nrow['nature2'];
                         echo "<option value='$id'>$nature2</option>";
                     }
                     ?>
