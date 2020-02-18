@@ -52,15 +52,15 @@ $db = get_db();
                     ?>
                 </select>
             </p>
-            <p> Where do you want to spend most of your time? (select 2)
+            <p> Where do you want to spend most of your time? (SELECT 2)
                 <select id="nature1" name="nature1">
                     <?php
                     $statement = $db->prepare("SELECT DISTINCT nature1 FROM national_parks ORDER BY nature1");
                     $statement->execute();
 
-                    while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $nrow['id'];
-                        $nature1 = $nrow['nature1'];
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['id'];
+                        $nature1 = $row['nature1'];
                         echo "<option value='$id'>$nature1</option>";
                     }
                     ?>
@@ -70,21 +70,52 @@ $db = get_db();
                     $statement = $db->prepare("SELECT DISTINCT nature2 FROM national_parks ORDER BY nature2");
                     $statement->execute();
 
-                    while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $nrow['id'];
-                        $nature2 = $nrow['nature2'];
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['id'];
+                        $nature2 = $row['nature2'];
                         echo "<option value='$id'>$nature2</option>";
                     }
                     ?>
                 </select>
             </p>
 
-            <p>Where do you want to spend most of your time?
-                <input type="checkbox" id="sunny" name="nature[]" value="sunny" /><label for="sunny">Forest</label>
-                <input type="checkbox" id="snowy" name="nature[]" value="snowy" /><label for="snowy">Beach</label>
-                <input type="checkbox" id="snowy" name="nature[]" value="snowy" /><label for="snowy">Mountains</label>
-                <input type="checkbox" id="snowy" name="nature[]" value="snowy" /><label for="snowy">Water</label>
-                <input type="checkbox" id="snowy" name="nature[]" value="snowy" /><label for="snowy">Desert</label>
+            <p>What activities are interesting to you? (SELECT 3)
+            <select id="activity1" name="activity1">
+                    <?php
+                    $statement = $db->prepare("SELECT DISTINCT activity1 FROM national_parks ORDER BY activity1");
+                    $statement->execute();
+
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['id'];
+                        $activity1 = $row['activity1'];
+                        echo "<option value='$id'>$activity1</option>";
+                    }
+                    ?>
+                </select>
+                <select id="activity2" name="activity2">
+                    <?php
+                    $statement = $db->prepare("SELECT DISTINCT activity2 FROM national_parks ORDER BY activity2");
+                    $statement->execute();
+
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['id'];
+                        $activity2 = $row['activity2'];
+                        echo "<option value='$id'>$activity2</option>";
+                    }
+                    ?>
+                </select>
+                <select id="activity3" name="activity3">
+                    <?php
+                    $statement = $db->prepare("SELECT DISTINCT activity3 FROM national_parks ORDER BY activity3");
+                    $statement->execute();
+
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['id'];
+                        $activity3 = $row['activity3'];
+                        echo "<option value='$id'>$activity3</option>";
+                    }
+                    ?>
+                </select>
             </p>
             <br><br>
             <button class="submit_button" type="submit">Show Me My Vacation Destination!</button>
