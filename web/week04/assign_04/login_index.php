@@ -45,9 +45,10 @@ $db = get_db();
                     $statement->execute();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $placeholder = '- select -';
                         $id = $row['id'];
                         $state = $row['us_state'];
-                        echo "<option value='$id' placeholder='- select -'>$state</option>";
+                        echo "<option value='$id' placeholder='$placeholder'>$state</option>";
                     }
                     ?>
                 </select>
