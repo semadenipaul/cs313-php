@@ -82,7 +82,7 @@ $db = get_db();
             <p>Which of these activities interest you? (SELECT 3)
                 <select id="activity1" name="activity1">
                     <?php
-                    $statement = $db->prepare("SELECT DISTINCT activity1 FROM national_parks ORDER BY activity1");
+                    $statement = $db->prepare("SELECT DISTINCT activities1 FROM national_parks ORDER BY activity1");
                     $statement->execute();
 
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
@@ -94,7 +94,7 @@ $db = get_db();
                 </select>
                 <select id="activity2" name="activity2">
                     <?php
-                    $statement = $db->prepare("SELECT DISTINCT activity2 FROM national_parks ORDER BY activity2");
+                    $statement = $db->prepare("SELECT DISTINCT activities2 FROM national_parks ORDER BY activity2");
                     $statement->execute();
 
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
@@ -106,7 +106,7 @@ $db = get_db();
                 </select>
                 <select id="activity3" name="activity3">
                     <?php
-                    $statement = $db->prepare("SELECT DISTINCT activity3 FROM national_parks ORDER BY activity3");
+                    $statement = $db->prepare("SELECT DISTINCT activities3 FROM national_parks ORDER BY activity3");
                     $statement->execute();
 
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
