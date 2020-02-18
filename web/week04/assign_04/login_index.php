@@ -41,7 +41,7 @@ $db = get_db();
             <p>Which state would you like to visit?
                 <select id="states" name="state">
                     <?php
-                    $statement = $db->prepare("SELECT DISTINCT us_state FROM national_parks");
+                    $statement = $db->prepare("SELECT DISTINCT us_state FROM national_parks ORDER BY us_state");
                     $statement->execute();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {

@@ -29,7 +29,7 @@ session_start();
         </div>
         <div class="item3">
             <p>Username: <input type="text" name="username" /></p>
-            <p>Password: <input type="text" name="password" /></p>
+            <p>Password: <input type="password" name="password" /></p>
             <button type="submit" name="Submit" value="Submit!">Sign In</button><br>
             <a href="">Forgot Password</a>
             <a href="">Forgot Username</a>
