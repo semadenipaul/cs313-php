@@ -53,16 +53,26 @@ $db = get_db();
                 </select>
             </p>
             <p> Where do you want to spend most of your time? (select 2)
-                <select id="nature" name="nature">
+                <select id="nature1" name="nature1">
                     <?php
-                    $values = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks");
-                    $values->execute();
+                    $statement = $db->prepare("SELECT DISTINCT nature1 FROM national_parks ORDER BY nature1");
+                    $statement->execute();
 
-                    while ($nrow = $values->fetch(PDO::FETCH_ASSOC)) {
+                    while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $nrow['id'];
                         $nature1 = $nrow['nature1'];
-                        $nature1 = $nrow['nature2'];
                         echo "<option value='$id'>$nature1</option>";
+                    }
+                    ?>
+                </select>
+                <select id="nature2" name="nature2">
+                    <?php
+                    $statement = $db->prepare("SELECT DISTINCT nature2 FROM national_parks ORDER BY nature2");
+                    $statement->execute();
+
+                    while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $nrow['id'];
+                        $nature1 = $nrow['nature2'];
                         echo "<option value='$id'>$nature2</option>";
                     }
                     ?>
