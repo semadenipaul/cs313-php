@@ -54,13 +54,13 @@ $db = get_db();
             </p>
             <p> Where do you want to spend most of your time? (select 2)
             <?php
-                    $statement = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks");
-                    $statement->execute();
+                    $values = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks");
+                    $values->execute();
 
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
-                        $nature1 = $row['nature1'];
-                        $nature2 = $row['nature2'];
+                    while ($nrow = $values->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $nrow['id'];
+                        $nature1 = $nrow['nature1'];
+                        $nature2 = $nrow['nature2'];
                         echo "<option value='$id'>$nature1</option>";
                         echo "<option value='$id'>$nature2</option>";
                     }
