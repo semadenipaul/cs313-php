@@ -87,7 +87,7 @@ $db = get_db();
 
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $arow['id'];
-                        $activity1 = $arow['activity1'];
+                        $activity1 = $arow['activities1'];
                         echo "<option value='$id'>$activity1</option>";
                     }
                     ?>
@@ -99,7 +99,7 @@ $db = get_db();
 
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $arow['id'];
-                        $activity2 = $arow['activity2'];
+                        $activity2 = $arow['activities2'];
                         echo "<option value='$id'>$activity2</option>";
                     }
                     ?>
@@ -111,7 +111,7 @@ $db = get_db();
 
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $arow['id'];
-                        $activity3 = $arow['activity3'];
+                        $activity3 = $arow['activities3'];
                         echo "<option value='$id'>$activity3</option>";
                     }
                     ?>
