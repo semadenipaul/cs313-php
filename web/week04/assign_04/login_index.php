@@ -55,7 +55,7 @@ $db = get_db();
             <p> Where do you want to spend most of your time? (select 2)
                 <select id="nature" name="nature">
                     <?php
-                    $values = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks ORDER BY nature1");
+                    $values = $db->prepare("SELECT DISTINCT nature1, nature2 FROM national_parks");
                     $values->execute();
 
                     while ($nrow = $values->fetch(PDO::FETCH_ASSOC)) {
