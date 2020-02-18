@@ -128,6 +128,7 @@ $db = get_db();
                         $vacation_time = $vrow['vacation_time'];
                         echo "<option value='$id'>$vacation_time</option>";
                     }
+                    
                     ?>
                 </select>
             </p>
