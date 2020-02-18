@@ -58,9 +58,9 @@ $db = get_db();
                     $statement = $db->prepare("SELECT DISTINCT nature1 FROM national_parks ORDER BY nature1");
                     $statement->execute();
 
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
-                        $nature1 = $row['nature1'];
+                    while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $nrow['id'];
+                        $nature1 = $nrow['nature1'];
                         echo "<option value='$id'>$nature1</option>";
                     }
                     ?>
@@ -70,9 +70,9 @@ $db = get_db();
                     $statement = $db->prepare("SELECT DISTINCT nature2 FROM national_parks ORDER BY nature2");
                     $statement->execute();
 
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
-                        $nature2 = $row['nature2'];
+                    while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $nrow['id'];
+                        $nature2 = $nrow['nature2'];
                         echo "<option value='$id'>$nature2</option>";
                     }
                     ?>
@@ -85,9 +85,9 @@ $db = get_db();
                     $statement = $db->prepare("SELECT DISTINCT activity1 FROM national_parks ORDER BY activity1");
                     $statement->execute();
 
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
-                        $activity1 = $row['activity1'];
+                    while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $arow['id'];
+                        $activity1 = $arow['activity1'];
                         echo "<option value='$id'>$activity1</option>";
                     }
                     ?>
@@ -97,9 +97,9 @@ $db = get_db();
                     $statement = $db->prepare("SELECT DISTINCT activity2 FROM national_parks ORDER BY activity2");
                     $statement->execute();
 
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
-                        $activity2 = $row['activity2'];
+                    while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $arow['id'];
+                        $activity2 = $arow['activity2'];
                         echo "<option value='$id'>$activity2</option>";
                     }
                     ?>
@@ -109,9 +109,9 @@ $db = get_db();
                     $statement = $db->prepare("SELECT DISTINCT activity3 FROM national_parks ORDER BY activity3");
                     $statement->execute();
 
-                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
-                        $activity3 = $row['activity3'];
+                    while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $arow['id'];
+                        $activity3 = $arow['activity3'];
                         echo "<option value='$id'>$activity3</option>";
                     }
                     ?>
