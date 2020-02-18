@@ -45,10 +45,9 @@ $db = get_db();
                     $statement->execute();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $placeholder = '- select -';
                         $id = $row['id'];
                         $state = $row['us_state'];
-                        echo "<option value='$id' placeholder='$placeholder'>$state</option>";
+                        echo "<option value='$id'>$state</option>";
                     }
                     ?>
                 </select>
@@ -62,7 +61,7 @@ $db = get_db();
                     while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $nrow['id'];
                         $nature1 = $nrow['nature1'];
-                        echo "<option value='$id' placeholder='- select -'>$nature1</option>";
+                        echo "<option value='$id'>$nature1</option>";
                     }
                     ?>
                 </select>
@@ -74,7 +73,7 @@ $db = get_db();
                     while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $nrow['id'];
                         $nature2 = $nrow['nature2'];
-                        echo "<option value='$id' placeholder='- select -'>$nature2</option>";
+                        echo "<option value='$id'>$nature2</option>";
                     }
                     ?>
                 </select>
@@ -89,7 +88,7 @@ $db = get_db();
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $arow['id'];
                         $activity1 = $arow['activities1'];
-                        echo "<option value='$id' placeholder='- select -'>$activity1</option>";
+                        echo "<option value='$id'>$activity1</option>";
                     }
                     ?>
                 </select>
@@ -101,7 +100,7 @@ $db = get_db();
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $arow['id'];
                         $activity2 = $arow['activities2'];
-                        echo "<option value='$id' placeholder='- select -'>$activity2</option>";
+                        echo "<option value='$id'>$activity2</option>";
                     }
                     ?>
                 </select>
@@ -113,7 +112,7 @@ $db = get_db();
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $arow['id'];
                         $activity3 = $arow['activities3'];
-                        echo "<option value='$id' placeholder='- select -'>$activity3</option>";
+                        echo "<option value='$id'>$activity3</option>";
                     }
                     ?>
                 </select>
@@ -127,7 +126,7 @@ $db = get_db();
                     while ($vrow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $vrow['id'];
                         $vacation_time = $vrow['vacation_time'];
-                        echo "<option value='$id' placeholder='- select -'>$vacation_time</option>";
+                        echo "<option value='$id'>$vacation_time</option>";
                     }
 
                     ?>
