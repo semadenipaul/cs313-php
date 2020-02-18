@@ -117,6 +117,20 @@ $db = get_db();
                     ?>
                 </select>
             </p>
+            <p>How many days do you want to spend?
+            <select id="vacation_time" name="vacation_time">
+                    <?php
+                    $statement = $db->prepare("SELECT DISTINCT vacation_time FROM national_parks ORDER BY vacation_time");
+                    $statement->execute();
+
+                    while ($vrow = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $vrow['id'];
+                        $vacation_time = $vrow['vacation_time'];
+                        echo "<option value='$id'>$vacation_time</option>";
+                    }
+                    ?>
+                </select>
+            </p>
             <br><br>
             <button class="submit_button" type="submit">Show Me My Vacation Destination!</button>
         </div>
