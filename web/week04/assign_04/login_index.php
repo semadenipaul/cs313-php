@@ -118,7 +118,7 @@ $db = get_db();
                 </select>
             </p>
             <p>How many days do you want to spend?
-            <select id="vacation_time" name="vacation_time">
+                <select id="vacation_time" name="vacation_time">
                     <?php
                     $statement = $db->prepare("SELECT DISTINCT vacation_time FROM national_parks ORDER BY vacation_time");
                     $statement->execute();
@@ -128,7 +128,6 @@ $db = get_db();
                         $vacation_time = $vrow['vacation_time'];
                         echo "<option value='$id'>$vacation_time</option>";
                     }
-
                     ?>
                 </select>
             </p>
@@ -212,6 +211,7 @@ while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
                     <option value="Wyoming">Wyoming</option>
                 </select>
                 ?>/*
+
 
 
 
