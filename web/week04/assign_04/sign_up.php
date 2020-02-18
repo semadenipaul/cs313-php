@@ -30,8 +30,8 @@ session_start();
         <div class="item3">
             <p>Username: <input type="text" name="username" /></p>
             <p>Re-Enter Username: <input type="text" name="username2" /></p>
-            <p>Password: <input type="text" name="password" /></p>
-            <p>Re-Enter Password: <input type="text" name="password2" /></p>
+            <p>Password: <input type="password" name="password" /></p>
+            <p>Re-Enter Password: <input type="password" name="password2" /></p>
             <p>Email: <input type="text" name="email" /></p>
             <p>City: <input type="text" name="city" /></p>
             <p>State: <input type="text" name="state" /></p>
@@ -42,6 +42,7 @@ session_start();
     </form>
 
     <?php
+    /*
     require "db_connect.php";
     $db = get_db();
 
@@ -54,6 +55,7 @@ session_start();
 
         echo "<div style=\"color: white;\" class=\"item4\"><p>User: $person<br>Previous Parks Visited: $national_parks</p></div>";
     }
+    */
     ?>
 </body>
 
