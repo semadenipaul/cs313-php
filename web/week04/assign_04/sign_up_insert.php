@@ -7,7 +7,7 @@ $new_person = True;
 $city = $_POST['city'];
 $state = $_POST['state'];
 
-require("dbConnect.php");
+require("db_connect.php");
 $db = get_db();
 
 try
