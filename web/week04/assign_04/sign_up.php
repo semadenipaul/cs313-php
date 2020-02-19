@@ -14,7 +14,7 @@ session_start();
 </head>
 
 <body>
-    <form action="" method="POST" class="grid-container">
+    <form action="sign_up_insert.php" method="POST" class="grid-container">
         <div class="item1">
             <p style="text-align: left; font-size: 20px;">Explore U.S. National Parks</p>
             <h1>Sign Up</h1>
