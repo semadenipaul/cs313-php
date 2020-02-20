@@ -4,6 +4,8 @@ $db = get_db();
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
+} else {
+  header('Location: signIn.php');
 }
 ?>
 <!DOCTYPE html>
@@ -21,15 +23,18 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $statement->execute();
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $username = $row['username'];
+
         $hash_password = $row['hashPass'];
+        
     }
-     if (password_verify($password, $hash_password)) {
-        echo "WELCOME $username!!!!!! fool. You killing me SMALLS!!";
-     } else {
-       header('Location: signIn.php');
-       die();
-     }
+    if (isset($hash_password)) {
+        if (password_verify($password, $hash_password)) {
+            echo "<h1>WELCOME $username!!!!!! fool. You killing me SMALLS!!</h1>";
+        } else {
+            header('Location: signIn.php');
+            die();
+        }
+    }
 
     ?>
 </body>
