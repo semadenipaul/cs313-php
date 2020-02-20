@@ -25,7 +25,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
         $hash_password = $row['hashPass'];
-        
+        echo "$hash_password";
     }
     if (isset($hash_password)) {
         if (password_verify($password, $hash_password)) {
