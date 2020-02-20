@@ -142,7 +142,7 @@ $db = get_db();
 
 <?php
 require "db_connect.php";
-$db = get_db();
+/*$db = get_db();
 
 $person = $db->prepare("SELECT * FROM person");
 $person->execute();
@@ -155,7 +155,7 @@ while ($row = $person->fetch(PDO::FETCH_ASSOC)) {
     $location = $row['person_location'];
 
     echo "<div style=\"color: white;\" class=\"item4\"><p>Username: $user_name<br>Password: $password<br>Email: $email<br>New Person? $new_person<br>Location: $location<br></p></div>";
-}
+}*/
 ?>
 <?php
 /*<select id="states">

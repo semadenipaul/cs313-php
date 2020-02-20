@@ -1,14 +1,19 @@
 <?php
-// retrieve POST data from the other page
+session_start();
+
+if (isset($_GET['Submit'])) {
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
 $state = $_GET['state'];
-$nature1 = $_GET['nature1'];
+/*$nature1 = $_GET['nature1'];
 $nature2 = $_GET['nature2'];
 $activities1 = $_GET['activities1'];
 $activities2 = $_GET['activities2'];
 $activities3 = $_GET['activities3'];
-$vacation_time = $_GET['vacation_time'];
+$vacation_time = $_GET['vacation_time'];*/
+}
+// retrieve POST data from the other page
+
 
 require("db_connect.php");
 $db = get_db();
