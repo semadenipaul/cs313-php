@@ -21,32 +21,27 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 <body>
     <?php
-    try {
-        $statement = $db->prepare("SELECT * FROM w7_usr WHERE username = :username");
-        $statement->bindValue(':username', $username);
-        $statement->execute();
-        echo "You were before the while loop<br>";
-        // Go through each result
+    $statement = $db->prepare("SELECT * FROM w7_usr WHERE username = :username");
+    $statement->bindValue(':username', $username);
+    $statement->execute();
+    echo "You were before the while loop<br>";
+    // Go through each result
 
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            echo "You are in the while loop fool.<br>";
-            $hash_password = $row['hashPass'];
-            echo "hash pass: $hash_password";
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        echo "You are in the while loop fool.<br>";
+        $hash_password = $row['hashPass'];
+        echo "hash pass: $hash_password";
 
-            if (isset($hash_password)) {
-                echo "the hash password is set fool<br>";
-                if (password_verify($password, $hash_password)) {
-                    echo "<h1>WELCOME $username!!!!!! fool. You killing me SMALLS!!</h1>";
-                } else {
-                    echo "Bad password";
-                    // header('Location: signIn.php');
-                    // die();
-                }
+        if (isset($hash_password)) {
+            echo "the hash password is set fool<br>";
+            if (password_verify($password, $hash_password)) {
+                echo "<h1>WELCOME $username!!!!!! fool. You killing me SMALLS!!</h1>";
+            } else {
+                echo "Bad password";
+                // header('Location: signIn.php');
+                // die();
             }
         }
-    }  catch (Exception $ex) {
-        echo "Error with DB. Details: $ex <br>";
-        die();
     }
     echo "You are after the while loop fool.<br>";
 
