@@ -5,6 +5,7 @@ if (isset($_GET['Submit'])) {
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
 $state = $_GET['state'];
+$state_id;
 /*$nature1 = $_GET['nature1'];
 $nature2 = $_GET['nature2'];
 $activities1 = $_GET['activities1'];
@@ -29,7 +30,8 @@ try
     $statement->execute();*/
 
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $state_id = $row['id'];
+        $id = $row['id'];
+        $state_id = $id;
     }
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
