@@ -20,7 +20,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 </head>
 <body>
     <?php
-    
+    try{
     $statement = $db->prepare("SELECT * FROM w7_usr WHERE username = '$username'");
     $statement->execute();
     echo "You were before the while loop";
@@ -38,7 +38,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             die();
         }
     }
-
+    }
+    catch (Exception $ex){
+        echo "Error with DB. Details: $ex";
+        die();
+    }
     ?>
 </body>
 
