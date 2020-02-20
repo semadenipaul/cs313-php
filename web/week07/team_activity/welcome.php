@@ -1,5 +1,5 @@
 <?php
-require("dbConnect.php");
+require 'dbConnect.php';
 $db = get_db();
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = htmlspecialchars($_POST['username']);
