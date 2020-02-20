@@ -26,10 +26,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     echo "You were before the while loop";
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-
+        echo "You are in the while loop fool.";
         $hash_password = $row['hashPass'];
         echo "$hash_password";
     }
+    echo "You are after the while loop fool.";
     if (isset($hash_password)) {
         if (password_verify($password, $hash_password)) {
             echo "<h1>WELCOME $username!!!!!! fool. You killing me SMALLS!!</h1>";
