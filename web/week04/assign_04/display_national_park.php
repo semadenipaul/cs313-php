@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if (isset($_GET['Submit'])) {
-    $username = $_SESSION['username'];
-    $password = $_SESSION['password'];
-    $state = $_GET['state'];
+if (isset($_GET["Submit"])) {
+    $username = $_SESSION["username"];
+    $password = $_SESSION["password"];
+    $state = $_GET["state"];
 }
 
 require("db_connect.php");
