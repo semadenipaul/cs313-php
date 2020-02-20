@@ -20,11 +20,11 @@ $db = get_db();
 
 try
 {
-	$query = "SELECT * FROM national_parks WHERE us_state = \'$state\'";
+	$query = "SELECT * FROM national_parks WHERE us_state = '$state'";
 	$statement = $db->prepare($query);
     $statement->execute();
     
-    $query_2 = "SELECT national_parks_id FROM national_parks WHERE us_state = \'$state\'";
+    $query_2 = "SELECT national_parks_id FROM national_parks WHERE us_state = '$state'";
     $statement = $db->prepare($query_2);
     $statement->execute();
 
