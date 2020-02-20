@@ -44,6 +44,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         echo "You are in the while loop fool.<br>";
         $hash_password = $row['hashPass'];
         echo "hash pass: $hash_password";
+        var_dump($row);
 
         if (isset($hash_password)) {
             echo "the hash password is set fool<br>";
