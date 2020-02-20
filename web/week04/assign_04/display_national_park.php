@@ -4,7 +4,7 @@ session_start();
 if (isset($_GET['Submit'])) {
     $username = $_SESSION['username'];
     $password = $_SESSION['password'];
-    $state_id = $_GET['state_id'];
+    $state = $_GET['state_id'];
 }
 
 require("db_connect.php");
@@ -39,7 +39,7 @@ $db = get_db();
         </div>
         <div class="item3">
             <?php
-            $statement = $db->prepare("SELECT * FROM national_parks WHERE id = $state_id");
+            $statement = $db->prepare("SELECT * FROM national_parks WHERE name = $state");
             $statement->execute();
 
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
