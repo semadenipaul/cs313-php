@@ -47,7 +47,7 @@ $db = get_db();
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $row['id'];
                         $state = $row['us_state'];
-                        echo "<option value='$id'>$state</option>";
+                        echo "<option value='$id' name='state'>$state</option>";
                     }
                     ?>
                 </select>
@@ -61,7 +61,7 @@ $db = get_db();
                     while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $nrow['id'];
                         $nature1 = $nrow['nature1'];
-                        echo "<option value='$id'>$nature1</option>";
+                        echo "<option value='$id' name='nature1'>$nature1</option>";
                     }
                     ?>
                 </select>
@@ -73,7 +73,7 @@ $db = get_db();
                     while ($nrow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $nrow['id'];
                         $nature2 = $nrow['nature2'];
-                        echo "<option value='$id'>$nature2</option>";
+                        echo "<option value='$id' name='nature2'>$nature2</option>";
                     }
                     ?>
                 </select>
@@ -88,7 +88,7 @@ $db = get_db();
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $arow['id'];
                         $activity1 = $arow['activities1'];
-                        echo "<option value='$id'>$activity1</option>";
+                        echo "<option value='$id' name='activities1'>$activity1</option>";
                     }
                     ?>
                 </select>
@@ -100,7 +100,7 @@ $db = get_db();
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $arow['id'];
                         $activity2 = $arow['activities2'];
-                        echo "<option value='$id'>$activity2</option>";
+                        echo "<option value='$id' name='activities2'>$activity2</option>";
                     }
                     ?>
                 </select>
@@ -112,7 +112,7 @@ $db = get_db();
                     while ($arow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $arow['id'];
                         $activity3 = $arow['activities3'];
-                        echo "<option value='$id'>$activity3</option>";
+                        echo "<option value='$id' name='activities3'>$activity3</option>";
                     }
                     ?>
                 </select>
@@ -126,7 +126,7 @@ $db = get_db();
                     while ($vrow = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $id = $vrow['id'];
                         $vacation_time = $vrow['vacation_time'];
-                        echo "<option value='$id'>$vacation_time</option>";
+                        echo "<option value='$id' name='vacation_time'>$vacation_time</option>";
                     }
                     ?>
                 </select>
