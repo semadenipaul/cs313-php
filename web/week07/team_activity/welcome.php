@@ -21,6 +21,19 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 <body>
     <?php
+    $query = "SELECT * FROM w7_usr WHERE username = :username";
+    $usr = $db->prepare($query);
+    $usr->bindValue(':username', $username);
+    $usr->execute();
+    while ($row = $usr->fetch(PDO::FETCH_ASSOC)) {
+        $usernameInSystem = $row['username'];
+        $passwordInSystem = $row['hashPass'];
+        echo "ppppppoooo: $usernameInSystem, $passwordInSystem";
+    }
+
+
+
+
     $statement = $db->prepare("SELECT * FROM w7_usr WHERE username = :username");
     $statement->bindValue(':username', $username);
     $statement->execute();
