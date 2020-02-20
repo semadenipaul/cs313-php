@@ -3,7 +3,9 @@ require("dbConnect.php");
 $db = get_db();
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = htmlspecialchars($_POST['username']);
+    echo "$username<br/>";
     $password = htmlspecialchars($_POST['password']);
+    echo "$password<br/>";
 } else {
   header('Location: signIn.php');
 }
@@ -21,6 +23,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     
     $statement = $db->prepare("SELECT * FROM w7_usr WHERE username = $username");
     $statement->execute();
+    echo "You were before the while loop";
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
