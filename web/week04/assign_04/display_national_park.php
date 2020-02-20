@@ -9,17 +9,10 @@ if (isset($_GET['Submit'])) {
 require("db_connect.php");
 $db = get_db();
 
-$username = $_GET['username'];
-$password = $_GET['passwprd'];
-$state = $_GET['state'];
-$nature1 = $_GET['nature1'];
-$nature2 = $_GET['nature2'];
-$activities1 = $_GET['activities1'];
-$activities2 = $_GET['activities2'];
-$activities3 = $_GET['activities3'];
-$vacation_time = $_GET['vacation_time'];
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+$state_id = $_GET['national_parks_id'];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,14 +41,16 @@ $vacation_time = $_GET['vacation_time'];
         </div>
         <div class="item3">
 			<?php 
-			echo "<p>Username: " . $username . " Password: " . $password . "</p>";
-			echo "<p>State: " . $state . "</p>";
-			echo "<p>#1 Nature option: " . $nature1 . "</p>";
-			echo "<p>#2 Nature option: " . $nature2 . "</p>";
-			echo "<p>#1 Activities option: " . $activities1 . "</p>";
-			echo "<p>#2 Activities option: " . $activities2 . "</p>";
-			echo "<p>#3 Activities option: " . $activities3 . "</p>";
-			echo "<p>Length of Vacation: " . $vacation_time . "</p>";
+			$statement = $db->prepare("SELECT * FROM national_parks WHERE id = $state_id");
+            $statement->execute();
+      
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+               $id = $row['id'];
+               $national_park = $row['national_park'];
+               $image = $row['image'];
+      
+               echo "<h1>$national_park</h1><p><img src=\"$image\" alt=\"Image of $image\"></p>";
+            }
 			?>
 		</div>
         <div class="item4"></div>
