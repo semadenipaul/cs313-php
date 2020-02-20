@@ -20,18 +20,17 @@ $db = get_db();
 
 try
 {
-	$query = "SELECT * FROM national_parks WHERE us_state = '$state'";
+	$query = "SELECT id FROM national_parks WHERE us_state = '$state'";
 	$statement = $db->prepare($query);
     $statement->execute();
     
-    $query_2 = "SELECT id FROM national_parks WHERE us_state = '$state'";
+    /*$query_2 = "SELECT id FROM national_parks WHERE us_state = '$state'";
     $statement = $db->prepare($query_2);
-    $statement->execute();
+    $statement->execute();*/
 
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
         $state_id = $row['id'];
     }
-    echo "Success!";
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
 }
@@ -40,7 +39,6 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: display_national_park.php/?national_parks_id=$state_id"); //Sends the data to display.php
+header("Location: display_national_park.php/?state_id=$state_id"); //Sends the data to display.php
 
-die(); 
-?>
+die();

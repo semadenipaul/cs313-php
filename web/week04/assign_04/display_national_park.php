@@ -2,16 +2,14 @@
 session_start();
 
 if (isset($_GET['Submit'])) {
-    $_SESSION['username'] = $_GET['username'];
-    $_SESSION['password'] = $_GET['password'];
+    $username = $_SESSION['username'];
+    $password = $_SESSION['password'];
+    $state_id = $_GET['state_id'];
 }
 
 require("db_connect.php");
 $db = get_db();
 
-$username = $_SESSION['username'];
-$password = $_SESSION['password'];
-$state_id = $_GET['national_parks_id'];
 ?>
 
 <!DOCTYPE html>
@@ -40,19 +38,19 @@ $state_id = $_GET['national_parks_id'];
             </ul>
         </div>
         <div class="item3">
-			<?php 
-			$statement = $db->prepare("SELECT * FROM national_parks WHERE id = $state_id");
+            <?php
+            $statement = $db->prepare("SELECT * FROM national_parks WHERE id = $state_id");
             $statement->execute();
-      
+
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-               $id = $row['id'];
-               $national_park = $row['national_park'];
-               $image = $row['image'];
-      
-               echo "<h1>$national_park</h1><p><img src=\"$image\" alt=\"Image of $image\"></p>";
+                $id = $row['id'];
+                $national_park = $row['national_park'];
+                $image = $row['image'];
+
+                echo "<h1>$national_park</h1><p><img src='$image' alt='Image of $image'></p>";
             }
-			?>
-		</div>
+            ?>
+        </div>
         <div class="item4"></div>
     </form>
 </body>
