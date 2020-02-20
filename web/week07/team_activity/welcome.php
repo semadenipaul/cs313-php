@@ -22,7 +22,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 <body>
     <?php
     try {
-        $statement = $db->prepare('SELECT * FROM w7_usr WHERE username = :username');
+        $statement = $db->prepare("SELECT * FROM w7_usr WHERE username = :username");
         $statement->bindValue(':username', $username);
         $statement->execute();
         echo "You were before the while loop<br>";
