@@ -25,7 +25,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $hash_password = $row['hashPass'];
     }
      if (password_verify($password, $hash_password)) {
-        echo "WELCOME $username!!!!!! fool.";
+        echo "WELCOME $username!!!!!! fool. You killing me SMALLS!!";
      } else {
        header('Location: signIn.php');
        die();

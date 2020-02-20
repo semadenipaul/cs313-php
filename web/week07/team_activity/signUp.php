@@ -1,18 +1,20 @@
 <?php
-  if(isset($_POST['submit'])) {
-    $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT); 
+session_start();
+if(isset($_POST['submit'])) {
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT); 
     header('Location: insertUser.php');
     die();
-  }
+}
 
   else {?>
 <!DOCTYPE html>
-        <head>
+        <title>
             <meta charset='utf-8'>
             <meta http-equiv='X-UA-Compatible' content='IE=edge'>
             <title>Sign up</title>
             <meta name='viewport' content='width=device-width, initial-scale=1'>
-        </head>
+        </title>
         <body>
             <form action='' method='POST'>
                 <label for='username'>New username</label>

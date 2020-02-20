@@ -1,15 +1,24 @@
 <?php
+session_start();
 require 'dbConnect.php';
 $db = get_db();
 
-$username = $_POST["username"];
-$pw = $_POST["password"];
+if (isset($_SESSION['username'])) {
+  $username = $_SESSION["username"];
+  $pw = $_SESSION["password"];
+}
+
+try {
+    $insert = $db->prepare('INSERT INTO w7_usr (username, hashPass) VALUES (:username, :pw);');
+    $insert->bindValue(':username', $username);
+    $insert->bindValue(':pw', $pw);
+    $insert->execute();
+} catch (\Throwable $th) {
+    echo "<h1>ERROR: User not created! You fail, fool." , $th->getMessage(), "</h1>";
+}
 
 
-$insert = $db->prepare('INSERT into w7_usr VALUES :username, :pw;');
-$insert->bindValue(':username', $username);
-$insert->bindValue(':pw', $pw);
-$insert->execute();
+
 
 header('Location: signIn.php');
 die();
