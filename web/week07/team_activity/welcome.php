@@ -30,7 +30,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             echo "You are in the while loop fool.<br>";
-            var_dump($row);
             $hash_password = $row['hashPass'];
             echo "hash pass: $hash_password";
 
@@ -39,8 +38,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 if (password_verify($password, $hash_password)) {
                     echo "<h1>WELCOME $username!!!!!! fool. You killing me SMALLS!!</h1>";
                 } else {
-                    header('Location: signIn.php');
-                    die();
+                    echo "Bad password";
+                    // header('Location: signIn.php');
+                    // die();
                 }
             }
         }
