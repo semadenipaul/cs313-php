@@ -82,12 +82,7 @@ body {
     font-family: 'Cabin Sketch', cursive;
 }
 
-.item3 > select, option {
-    color: red;
-    font-size: 1.1em;
-    font-family: 'Cabin Sketch', cursive;
-    background-color: red;
-}
+
 
 .item3 button {
     color: white;
