@@ -7,7 +7,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = htmlspecialchars($_POST['password']);
     echo "$password<br/>";
 } else {
-  header('Location: signIn.php');
+    header('Location: signIn.php');
 }
 ?>
 <!DOCTYPE html>
@@ -18,32 +18,36 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>| Welcome</title>
 </head>
+
 <body>
     <?php
-    try{
-    $statement = $db->prepare("SELECT * FROM w7_usr WHERE username = '$username'");
-    $statement->execute();
-    echo "You were before the while loop";
-    // Go through each result
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        echo "You are in the while loop fool.";
-        $hash_password = $row['hashPass'];
-        echo "$hash_password";
-    }
-    echo "You are after the while loop fool.";
-    if (isset($hash_password)) {
-        if (password_verify($password, $hash_password)) {
-            echo "<h1>WELCOME $username!!!!!! fool. You killing me SMALLS!!</h1>";
-        } else {
-            header('Location: signIn.php');
-            die();
+    try {
+        $statement = $db->prepare("SELECT * FROM w7_usr WHERE username = '$username'");
+        $statement->execute();
+        echo "You were before the while loop";
+        // Go through each result
+
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            echo "You are in the while loop fool.";
+            $hash_password = $row['hashPass'];
+            echo "$hash_password";
+
+            if (isset($hash_password)) {
+                echo "the hash password is set fool";
+                if (password_verify($password, $hash_password)) {
+                    echo "<h1>WELCOME $username!!!!!! fool. You killing me SMALLS!!</h1>";
+                } else {
+                    header('Location: signIn.php');
+                    die();
+                }
+            }
         }
-    }
-    }
-    catch (Exception $ex){
+    }  catch (Exception $ex) {
         echo "Error with DB. Details: $ex";
         die();
     }
+    echo "You are after the while loop fool.";
+
     ?>
 </body>
 
