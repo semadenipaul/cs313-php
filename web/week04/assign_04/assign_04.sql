@@ -34,7 +34,6 @@ CREATE TABLE national_parks
 CREATE TABLE national_parks_selected
 (
     id SERIAL NOT NULL PRIMARY KEY,
-    person INT NOT NULL REFERENCES person(id),
     --national_parks INT NOT NULL REFERENCES national_parks(id),
     us_state VARCHAR(200) NOT NULL,
     nature1 VARCHAR(200) NOT NULL,

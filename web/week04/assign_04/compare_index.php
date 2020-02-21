@@ -20,9 +20,8 @@ $db = get_db();
 
 try
 {
-	$query = 'INSERT INTO national_parks_selected (person, us_state, nature1, nature2, activities1, activities2, activities3, vacation_time) VALUES (:username, :state, :nature1, :nature2, :activities1, :activities2, :activities3, :vacation_time)';
+	$query = 'INSERT INTO national_parks_selected (us_state, nature1, nature2, activities1, activities2, activities3, vacation_time) VALUES (:state, :nature1, :nature2, :activities1, :activities2, :activities3, :vacation_time)';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':username', $username);
 	$statement->bindValue(':state', $state);
     $statement->bindValue(':nature1', $nature1);
     $statement->bindValue(':nature2', $nature2);
