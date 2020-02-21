@@ -42,15 +42,20 @@ $stateParkId = $_GET['stateParkId'];
             $statement = $db->prepare("SELECT * FROM national_parks_selected WHERE id = :stateParkId");
             $statement->bindValue(':stateParkId', $stateParkId);
             $statement->execute();
-            
+
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $id = $row['id'];
-                $state = $row['us_state'];
+                $state_id = $row['us_state'];
                 /*$national_park = $row['national_park'];
-                $image = $row['image'];
+                $image = $row['image'];*/
+                $state = $db->prepare("SELECT us_state FROM national_parks WHERE id = $state_id");
+                    $state->execute();
+                    while ($srow = $state->fetch(PDO::FETCH_ASSOC)) {
+                        $s = $srow['us_state'];
+                    }
 
-                echo "$national_park<br><img src=\"$image\">";*/
-                echo "Welcome to the wonderful state of '$state'";
+                /*echo "$national_park<br><img src=\"$image\">";*/
+                echo "Welcome to the wonderful state of '$s'";
             }
             ?>
         </div>
