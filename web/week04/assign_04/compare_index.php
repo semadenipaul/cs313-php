@@ -42,7 +42,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: login_index.php/?stateParkId=$stateParkId"); //Sends the data to display.php
+header("Location: display_national_park.php/?stateParkId=$stateParkId"); //Sends the data to display.php
 
 die(); 
 ?>
