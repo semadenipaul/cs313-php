@@ -5,6 +5,7 @@ if (isset($_POST["Submit"])) {
     $username = $_SESSION["username"];
     $password = $_SESSION["password"];
     $state = $_POST["state"];
+    echo "Values getting set";
 }
 
 require("db_connect.php");
@@ -42,7 +43,7 @@ $db = get_db();
             echo "State: " . $state;
             $statement = $db->prepare("SELECT * FROM national_parks WHERE us_state = '$state'");
             $statement->execute();
-
+            echo "Before the while loop";
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $id = $row['id'];
                 $national_park = $row['national_park'];
