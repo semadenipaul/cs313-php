@@ -23,7 +23,7 @@ $db = get_db();
 </head>
 
 <body>
-    <form action="display_national_park.php" method="GET" class="grid-container">
+    <form action="display_national_park.php" method="POST" class="grid-container">
         <div class="item1">
             <h1>Explore U.S. National Parks</h1>
         </div>
