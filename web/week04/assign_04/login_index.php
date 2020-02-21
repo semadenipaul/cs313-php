@@ -23,7 +23,7 @@ $db = get_db();
 </head>
 
 <body>
-    <form action="" method="GET" class="grid-container">
+    <form action="display_national_park.php" method="GET" class="grid-container">
         <div class="item1">
             <h1>Explore U.S. National Parks</h1>
         </div>
@@ -141,8 +141,6 @@ $db = get_db();
 </html>
 
 <?php
-header("Location: display_national_park.php/?state=$state");
-die();
 /*require "db_connect.php";
 $db = get_db();
 
