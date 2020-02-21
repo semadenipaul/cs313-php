@@ -23,7 +23,7 @@ $db = get_db();
 </head>
 
 <body>
-    <form action="compare_index.php" method="GET" class="grid-container">
+    <form action="display_national_park.php" method="GET" class="grid-container">
         <div class="item1">
             <h1>Explore U.S. National Parks</h1>
         </div>
@@ -45,9 +45,9 @@ $db = get_db();
                     $statement->execute();
 
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
+                        $state_id = $row['id'];
                         $state = $row['us_state'];
-                        echo "<option value='$id' name='state'>$state</option>";
+                        echo "<option value='$state_id' name='state'>$state</option>";
                     }
                     ?>
                 </select>
@@ -132,7 +132,7 @@ $db = get_db();
                 </select>
             </p>
             <br><br>
-            <button class="submit_button" type="submit">Show Me My Vacation Destination!</button>
+            <button type="submit" name="Submit" value="Submit!">Show Me My Vacation Destination!</button>
         </div>
         <div class="item4"></div>
     </form>
