@@ -4,7 +4,7 @@ session_start();
 if (isset($_GET["Submit"])) {
     $username = $_SESSION["username"];
     $password = $_SESSION["password"];
-    $state = $_GET["state"];
+    $id = $_GET["state_id"];
 }
 
 require("db_connect.php");
@@ -40,7 +40,7 @@ $db = get_db();
         <div class="item3">
             <?php
             echo "State: " . $state;
-            $statement = $db->prepare("SELECT * FROM national_parks WHERE name = $state");
+            $statement = $db->prepare("SELECT * FROM national_parks WHERE id = '$id'");
             $statement->execute();
 
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
@@ -48,7 +48,7 @@ $db = get_db();
                 $national_park = $row['national_park'];
                 $image = $row['image'];
 
-                echo "<h1>$national_park</h1><p><img src='$image' alt='Image of $image'></p>";
+                echo "$national_park<br><img src=\"$image\">";
             }
             ?>
         </div>
