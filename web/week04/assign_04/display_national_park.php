@@ -39,6 +39,7 @@ $db = get_db();
         </div>
         <div class="item3">
             <?php
+            echo "State: " . $state;
             $statement = $db->prepare("SELECT * FROM national_parks WHERE name = $state");
             $statement->execute();
 
