@@ -1,36 +1,40 @@
 <?php
 session_start();
 
-if (isset($_GET['Submit'])) {
+if (isset($_POST['Submit'])) {
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
-$state = $_GET['state'];
-$nature1 = $_GET['nature1'];
-$nature2 = $_GET['nature2'];
-$activities1 = $_GET['activities1'];
-$activities2 = $_GET['activities2'];
-$activities3 = $_GET['activities3'];
-$vacation_time = $_GET['vacation_time'];
 }
-// retrieve POST data from the other page
+$state = $_POST['state'];
+$nature1 = $_POST['nature1'];
+$nature2 = $_POST['nature2'];
+$activities1 = $_POST['activities1'];
+$activities2 = $_POST['activities2'];
+$activities3 = $_POST['activities3'];
+$vacation_time = $_POST['vacation_time'];
 
+// retrieve POST data from the other page
 
 require("db_connect.php");
 $db = get_db();
 
 try
 {
-	$query = "SELECT id FROM national_parks WHERE us_state = '$state'";
+	$query = 'INSERT INTO national_parks_selected (person, national_parks, us_state, nature1, nature2, activities1, activities2, activities3, vacation_time) VALUES (:username, :state, :nature1, :nature2, :activities1, :activities2, :activities3, :vacation_time)';
 	$statement = $db->prepare($query);
-    $statement->execute();
-    
-    /*$query_2 = "SELECT id FROM national_parks WHERE us_state = '$state'";
-    $statement = $db->prepare($query_2);
-    $statement->execute();*/
+	$statement->bindValue(':username', $username);
+	$statement->bindValue(':state', $state);
+    $statement->bindValue(':nature1', $nature1);
+    $statement->bindValue(':nature2', $nature2);
+    $statement->bindValue(':activities1', $activities1);
+    $statement->bindValue(':activities2', $activities2);
+    $statement->bindValue(':activities3', $activities3);
+    $statement->bindValue(':vacation_time', $vacation_time);
+	$statement->execute();
 
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $id = $row['id'];
-    }
+	$userId = $db->lastInsertId('national_parks_selected_id_seq');
+	// insert into database
+	
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
 }
@@ -39,6 +43,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: display_national_park.php/?state_id=$id"); //Sends the data to display.php
+header("Location: login_index.php/?stateParkId=$stateParkId"); //Sends the data to display.php
 
-die();
+die(); 
+?>

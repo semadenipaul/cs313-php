@@ -1,16 +1,15 @@
 <?php
 session_start();
 
-if (isset($_POST["Submit"])) {
+if (isset($_GET["Submit"])) {
     $username = $_SESSION["username"];
     $password = $_SESSION["password"];
-    $state = $_POST["state"];
-    echo "Values getting set";
 }
 
 require("db_connect.php");
 $db = get_db();
 
+$stateParkId = $_GET['stateParkId'];
 ?>
 
 <!DOCTYPE html>
@@ -40,16 +39,18 @@ $db = get_db();
         </div>
         <div class="item3">
             <?php
-            echo "State: " . $state;
-            $statement = $db->prepare("SELECT * FROM national_parks WHERE us_state = '$state'");
+            $statement = $db->prepare("SELECT * FROM national_parks_selected WHERE id = :stateParkId");
+            $statement->bindValue(':stateParkId', $stateParkId);
             $statement->execute();
-            echo "Before the while loop";
+            
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $id = $row['id'];
-                $national_park = $row['national_park'];
+                $state = $row['us_state'];
+                /*$national_park = $row['national_park'];
                 $image = $row['image'];
 
-                echo "$national_park<br><img src=\"$image\">";
+                echo "$national_park<br><img src=\"$image\">";*/
+                echo "Welcome to the wonderful state of '$state'";
             }
             ?>
         </div>
