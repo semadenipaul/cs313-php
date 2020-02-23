@@ -23,7 +23,7 @@ $db = get_db();
 </head>
 
 <body>
-    <form action="" method="GET" class="grid-container">
+    <form action="" method="GET" class="grid-container" onsubmit="myFunction()">
         <div class="item1">
             <h1>Explore U.S. National Parks</h1>
         </div>
