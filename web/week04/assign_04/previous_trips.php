@@ -39,9 +39,9 @@ $db = get_db();
             $username = $_SESSION['username'];
             echo "Username = " . $username . " :)<br>";
 
-            $query = "SELECT * FROM person WHERE user_name = $username";
+            $query = "SELECT * FROM person WHERE user_name = '$username'";
             $usr = $db->prepare($query);
-            
+
             $usr->execute();
 
             while ($row = $usr->fetch(PDO::FETCH_ASSOC)) {
