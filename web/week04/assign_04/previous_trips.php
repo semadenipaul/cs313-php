@@ -48,14 +48,23 @@ $db = get_db();
                 $id = $row['id'];
                 $user_name = $row['user_name'];
                 $newPerson = $row['new_person'];
-                echo "Welcome $user_name it is $newPerson that you are a new customer with id of $id.";
+
+                echo "Welcome $user_name it is $newPerson that you are a new customer with id of $id. <br>";
+
+                if ($newPerson == 1) {
+                    echo "Welcome to Explore U.S. National Parks. <br> You must first go on a trip before you can write a review.";
+                }
+                else {
+                    echo "<p>Write a review for the National Parks you have visited!</p>
+                          <input type=\"button\" name=\"answer\" value=\"Write a Review\" onclick=\"myFunction()\"><br>
+                          <textarea class=\"hide\" id=\"review\" name=\"review\" value=\"\" cols=\"100\" rows=\"10\"></textarea>
+                          <button class=\"hide\" name=\"Submit\" id=\"save\" value=\"Submit\">Save Review</button>";
+                }
+                
             }
 
             ?>
-            <p>Write a review for the National Parks you have visited!</p>
-            <input type="button" name="answer" value="Write a Review" onclick="myFunction()"><br>
-            <textarea class="hide" id="review" name="review" value="" cols="100" rows="10"></textarea>
-            <button class="hide" name="Submit" id="save" value="Submit">Save Review</button>
+            
         </div>
         <div class="item4"></div>
     </form>
