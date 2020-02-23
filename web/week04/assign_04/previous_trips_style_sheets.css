@@ -95,3 +95,11 @@ body {
     font-family: 'Cabin Sketch', cursive;
     background-color: black;
 }
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

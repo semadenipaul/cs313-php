@@ -38,6 +38,7 @@ $db = get_db();
         </div>
         <div class="item3">
             <?php 
+            echo "Username = " . $username . " :)";
             $query = "SELECT * FROM person WHERE user_name = '$username'";
             $usr = $db->prepare($query);
             $usr->execute();
@@ -51,6 +52,7 @@ $db = get_db();
             ?>
             <p>Write a review for the National Parks you have visited!</p>
             <button onclick="myFunction()">Write a Review</button><br>
+            <textarea name="review" id="review" cols="100" rows="50"></textarea>
         </div>
         <div class="item4"></div>
     </form>
