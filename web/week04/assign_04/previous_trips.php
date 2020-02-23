@@ -2,8 +2,8 @@
 session_start();
 
 if (isset($_POST['Submit'])) {
-    $_SESSION['username'] = $_POST['username'];
-    $_SESSION['password'] = $_POST['password'];
+    $username = $_SESSION['username'];
+    $username = $_SESSION['password'];
 }
 
 require("db_connect.php");
@@ -50,7 +50,7 @@ $db = get_db();
         
             ?>
             <p>Write a review for the National Parks you have visited!</p>
-            <button onclick="createTextArea()" name="submit" id="submit">Write a Review</button>
+            <button onclick="createTextArea(this)" name="submit" id="submit">Write a Review</button>
             <textarea id="review"></textarea>
         </div>
         <div class="item4"></div>

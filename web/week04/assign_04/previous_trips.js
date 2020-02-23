@@ -1,6 +1,6 @@
-function createTextArea() {
+function createTextArea(el) {
     var submitted = document.getElementById("submit");
-    if (true) {
+    if (el == true) {
         submitted.nextElementSibling.getElementsByClassName.visibility = "visible";
     }
 
