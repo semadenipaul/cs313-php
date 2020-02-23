@@ -50,7 +50,8 @@ $db = get_db();
         
             ?>
             <p>Write a review for the National Parks you have visited!</p>
-            <button onclick="createTextArea()">Write a Review</button>
+            <button onclick="createTextArea()" name="submit" id="submit">Write a Review</button>
+            <textarea id="review"></textarea>
         </div>
         <div class="item4"></div>
     </form>

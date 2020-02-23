@@ -1,7 +1,7 @@
 function createTextArea() {
-    var textBox = document.createElement("TEXTAREA");
-    var text = document.createTextNode("");
+    var submitted = document.getElementById("submit");
+    if (true) {
+        submitted.nextElementSibling.getElementsByClassName.visibility = "visible";
+    }
 
-    textBox.appendChild(text);
-    document.body.appendChild(textBox);
 }
