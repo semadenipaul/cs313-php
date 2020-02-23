@@ -23,7 +23,7 @@ $db = get_db();
 </head>
 
 <body>
-    <form action="compare_index.php" method="POST" class="grid-container">
+    <form action="" method="GET" class="grid-container">
         <div class="item1">
             <h1>Explore U.S. National Parks</h1>
         </div>
@@ -50,7 +50,7 @@ $db = get_db();
         
             ?>
             <p>Write a review for the National Parks you have visited!</p>
-            <button id="submit" name="submit" value="Submit!" onclick="createTextArea()">Write a Review</button>
+            <button onclick="createTextArea()">Write a Review</button>
         </div>
         <div class="item4"></div>
     </form>
