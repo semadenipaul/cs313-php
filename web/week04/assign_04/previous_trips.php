@@ -23,7 +23,7 @@ $db = get_db();
 </head>
 
 <body>
-    <form action="" method="GET" class="grid-container" onsubmit="myFunction()">
+    <form action="insert_review.php" method="POST" class="grid-container">
         <div class="item1">
             <h1>Explore U.S. National Parks</h1>
         </div>
@@ -39,7 +39,7 @@ $db = get_db();
         <div class="item3">
             <?php
             $username = $_SESSION['username'];
-            echo "Username = " . $username . " :)";
+            echo "Username = " . $username . " :)<br>";
             $query = "SELECT * FROM person WHERE user_name = :username";
             $usr = $db->prepare($query);
             $usr->bindValue(':username', $username);
@@ -54,7 +54,8 @@ $db = get_db();
             ?>
             <p>Write a review for the National Parks you have visited!</p>
             <input type="button" name="answer" value="Write a Review" onclick="myFunction()"><br>
-            <textarea class="hide" id="review" value="" cols="100" rows="10"></textarea>
+            <textarea class="hide" id="review" name="review" value="" cols="100" rows="10"></textarea>
+            <button class="hide" name="Submit" id="save" value="Submit">Save Review</button>
         </div>
         <div class="item4"></div>
     </form>
