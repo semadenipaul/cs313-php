@@ -40,8 +40,9 @@ $db = get_db();
             <?php
             $username = $_SESSION['username'];
             echo "Username = " . $username . " :)";
-            $query = "SELECT * FROM person WHERE user_name = '$username'";
+            $query = "SELECT * FROM person WHERE user_name = :username";
             $usr = $db->prepare($query);
+            $usr->bindValue(':username', $username);
             $usr->execute();
             while ($row = $usr->fetch(PDO::FETCH_ASSOC)) {
                 $id = $row['id'];
