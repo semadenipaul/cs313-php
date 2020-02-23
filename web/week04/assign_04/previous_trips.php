@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_POST['Submit'])) {
+if (isset($_SESSION['Submit'])) {
     $username = $_SESSION['username'];
     $username = $_SESSION['password'];
 }
@@ -37,7 +37,7 @@ $db = get_db();
             </ul>
         </div>
         <div class="item3">
-            <?php 
+            <?php
             echo "Username = " . $username . " :)";
             $query = "SELECT * FROM person WHERE user_name = '$username'";
             $usr = $db->prepare($query);
@@ -48,11 +48,13 @@ $db = get_db();
                 $newPerson = ['new_person'];
                 echo "Welcome $username it is $newPerson that you are a new customer.";
             }
-        
+
             ?>
             <p>Write a review for the National Parks you have visited!</p>
-            <button onclick="myFunction()">Write a Review</button><br><br>
-            <textarea name="review" id="review" cols="50" rows="50" class="hide"></textarea>
+            <input type="button" name="answer" value="Show Text Field" onclick="myFunction()" />
+            <input class="hide" type="text" id="textInput" value="..." />
+            <!--<button onclick="myFunction()">Write a Review</button><br><br>
+            <textarea name="review" id="review" cols="50" rows="50" class="hide"></textarea>-->
         </div>
         <div class="item4"></div>
     </form>
