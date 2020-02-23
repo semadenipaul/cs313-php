@@ -31,8 +31,6 @@ $db = get_db();
             <ul>
                 <li><a href="home_page.php">Home Page</a></li>
                 <li><a href="">Previous Trips</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">About Us</a></li>
                 <li><a href="">Logout</a></li>
             </ul>
         </div>
@@ -47,7 +45,7 @@ $db = get_db();
             while ($row = $usr->fetch(PDO::FETCH_ASSOC)) {
                 $id = $row['id'];
                 $user_name = $row['user_name'];
-                $newPerson = ['new_person'];
+                $newPerson = $row['new_person'];
                 echo "<Welcome $user_name it is $newPerson that you are a new customer.";
             }
 

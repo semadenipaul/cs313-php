@@ -31,8 +31,6 @@ $db = get_db();
             <ul>
                 <li><a href="home_page.php">Home Page</a></li>
                 <li><a href="previous_trips.php">Previous Trips</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">About Us</a></li>
                 <li><a href="">Logout</a></li>
             </ul>
         </div>

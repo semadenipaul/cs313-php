@@ -24,7 +24,6 @@ session_start();
                 <li><a href="home_page.php">Home Page</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="sign_up.php">Sign Up</a></li>
-                <li><a href="">About Us</a></li>
             </ul>
         </div>
         <div class="item3" id="stage">
