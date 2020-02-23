@@ -52,8 +52,8 @@ $db = get_db();
 
             ?>
             <p>Write a review for the National Parks you have visited!</p>
-            <input type="button" name="answer" value="Write a Review" onclick="myFunction()" />
-            <input class="hide" type="text" id="review" value="" rows="30" cols ="100"/>
+            <button name="answer" onclick="myFunction()">Write a Review</button>
+            <input class="hide" type="textarea" id="review" value="" cols="50" rows="50"/>
             <!--<button onclick="myFunction()">Write a Review</button><br><br>
             <textarea name="review" id="review" cols="50" rows="50" class="hide"></textarea>-->
         </div>
