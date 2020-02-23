@@ -1,7 +1,6 @@
-function createTextArea(el) {
-    var submitted = document.getElementById("submit");
-    if (el == true) {
-        submitted.nextElementSibling.getElementsByClassName.visibility = "visible";
+function createTextArea() {
+    var submitted = document.getElementById("review");
+    if (true) {
+        submitted.style.visibility = "hidden";
     }
-
 }
