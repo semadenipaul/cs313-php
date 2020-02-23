@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if (isset($_SESSION['Submit'])) {
-    $username = $_SESSION['username'];
-    $username = $_SESSION['password'];
+if (isset($_POST['Submit'])) {
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['password'] = $_POST['password'];
 }
 
 require("db_connect.php");
@@ -38,8 +38,8 @@ $db = get_db();
         </div>
         <div class="item3">
             <?php
-            echo "Username = " . $username . " :)";
-            $query = "SELECT * FROM person WHERE user_name = '$username'";
+            echo "Username = " . $_SESSION['username'] . " :)";
+            $query = "SELECT * FROM person WHERE user_name =" . $_SESSION['username'];
             $usr = $db->prepare($query);
             $usr->execute();
             while ($row = $usr->fetch(PDO::FETCH_ASSOC)) {
