@@ -48,7 +48,7 @@ $stateParkId = $_GET['stateParkId'];
                 $state_id = $row['us_state'];
                 /*$national_park = $row['national_park'];
                 $image = $row['image'];*/
-                $state = $db->prepare("SELECT us_state FROM national_parks WHERE id = $state_id");
+                    $state = $db->prepare("SELECT us_state FROM national_parks WHERE id = $id");
                     $state->execute();
                     while ($srow = $state->fetch(PDO::FETCH_ASSOC)) {
                         $s = $srow['us_state'];

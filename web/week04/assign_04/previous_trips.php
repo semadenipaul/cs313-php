@@ -30,6 +30,7 @@ $db = get_db();
         <div class="item2">
             <ul>
                 <li><a href="home_page.php">Home Page</a></li>
+                <li><a href="login_index.php">Find a New Trip</a></li>
                 <li><a href="">Previous Trips</a></li>
                 <li><a href="">Logout</a></li>
             </ul>
@@ -49,7 +50,7 @@ $db = get_db();
                 $user_name = $row['user_name'];
                 $newPerson = $row['new_person'];
 
-                echo "Welcome $user_name it is $newPerson that you are a new customer with id of $id. <br>";
+                /*echo "Welcome $user_name it is $newPerson that you are a new customer with id of $id. <br>";*/
 
                 if ($newPerson == 1) {
                     echo "Welcome to Explore U.S. National Parks. <br> You must first go on a trip before you can write a review.";
