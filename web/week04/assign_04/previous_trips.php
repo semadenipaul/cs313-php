@@ -38,15 +38,17 @@ $db = get_db();
             <?php
             $username = $_SESSION['username'];
             echo "Username = " . $username . " :)<br>";
-            $query = "SELECT * FROM person WHERE user_name = :username";
+
+            $query = "SELECT * FROM person WHERE user_name = $username";
             $usr = $db->prepare($query);
-            $usr->bindValue(':username', $username);
+            
             $usr->execute();
+
             while ($row = $usr->fetch(PDO::FETCH_ASSOC)) {
                 $id = $row['id'];
                 $user_name = $row['user_name'];
                 $newPerson = $row['new_person'];
-                echo "<Welcome $user_name it is $newPerson that you are a new customer.";
+                echo "Welcome $user_name it is $newPerson that you are a new customer with id of $id.";
             }
 
             ?>
